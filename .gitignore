@@ -25,11 +25,15 @@ captures/
 *.class
 *.log
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 hs_err_pid*
 replay_pid*
 
 # Kotlin data
 .kotlin/
-EOF
+
+# Heap dumps
+*.hprof
+java_pid*.hprof
 
