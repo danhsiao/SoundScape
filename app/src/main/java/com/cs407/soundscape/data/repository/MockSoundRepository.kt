@@ -57,7 +57,7 @@ class MockSoundRepository {
                 longitude = -122.4170,
                 timestamp = Date(System.currentTimeMillis() - 3600000),
                 soundType = SoundType.TRAFFIC,
-                decibelLevel = 75.5f,
+                decibelLevel = 78.0f,
                 duration = 300000
             ),
             SoundEvent(
@@ -68,7 +68,7 @@ class MockSoundRepository {
                 longitude = -122.4862 + 0.06,
                 timestamp = Date(System.currentTimeMillis() - 7200000),
                 soundType = SoundType.NATURE,
-                decibelLevel = 45.0f,
+                decibelLevel = 35.0f,
                 duration = 600000
             ),
             SoundEvent(
@@ -79,7 +79,7 @@ class MockSoundRepository {
                 longitude = -122.3910,
                 timestamp = Date(System.currentTimeMillis() - 10800000),
                 soundType = SoundType.CONSTRUCTION,
-                decibelLevel = 85.0f,
+                decibelLevel = 95.0f,
                 duration = 1800000
             ),
             SoundEvent(
@@ -90,7 +90,7 @@ class MockSoundRepository {
                 longitude = -122.4110,
                 timestamp = Date(System.currentTimeMillis() - 14400000),
                 soundType = SoundType.MUSIC,
-                decibelLevel = 65.0f,
+                decibelLevel = 68.0f,
                 duration = 900000
             ),
             SoundEvent(
@@ -101,7 +101,7 @@ class MockSoundRepository {
                 longitude = -122.4350,
                 timestamp = Date(System.currentTimeMillis() - 18000000),
                 soundType = SoundType.ANIMAL,
-                decibelLevel = 60.0f,
+                decibelLevel = 55.0f,
                 duration = 120000
             )
         )
