@@ -46,63 +46,63 @@ class MockSoundRepository {
         val c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
         return earthRadius * c
     }
-    
+
     companion object {
         private var mockEvents = listOf(
             SoundEvent(
                 id = "1",
                 title = "Traffic Noise",
-                description = "Heavy traffic on Main Street",
-                latitude = 37.7749,
-                longitude = -122.4194,
-                timestamp = Date(System.currentTimeMillis() - 3600000), // 1 hour ago
+                description = "Heavy traffic on Market St",
+                latitude = 37.7760,
+                longitude = -122.4170,
+                timestamp = Date(System.currentTimeMillis() - 3600000),
                 soundType = SoundType.TRAFFIC,
-                decibelLevel = 75.5f,
-                duration = 300000 // 5 minutes
+                decibelLevel = 78.0f,
+                duration = 300000
             ),
             SoundEvent(
                 id = "2",
                 title = "Birds Chirping",
                 description = "Morning birds in the park",
-                latitude = 37.7849,
-                longitude = -122.4094,
-                timestamp = Date(System.currentTimeMillis() - 7200000), // 2 hours ago
+                latitude = 37.7694,      // Dolores Park area
+                longitude = -122.4862 + 0.06,
+                timestamp = Date(System.currentTimeMillis() - 7200000),
                 soundType = SoundType.NATURE,
-                decibelLevel = 45.0f,
-                duration = 600000 // 10 minutes
+                decibelLevel = 35.0f,
+                duration = 600000
             ),
             SoundEvent(
                 id = "3",
                 title = "Construction Site",
                 description = "Building construction nearby",
-                latitude = 37.7649,
-                longitude = -122.4294,
-                timestamp = Date(System.currentTimeMillis() - 10800000), // 3 hours ago
+                latitude = 37.7890,      // closer to Embarcadero
+                longitude = -122.3910,
+                timestamp = Date(System.currentTimeMillis() - 10800000),
                 soundType = SoundType.CONSTRUCTION,
-                decibelLevel = 85.0f,
-                duration = 1800000 // 30 minutes
+                decibelLevel = 95.0f,
+                duration = 1800000
             ),
             SoundEvent(
                 id = "4",
                 title = "Street Musician",
-                description = "Guitarist playing on the corner",
-                latitude = 37.7549,
-                longitude = -122.4394,
-                timestamp = Date(System.currentTimeMillis() - 14400000), // 4 hours ago
+                description = "Guitarist in North Beach",
+                latitude = 37.8040,      // north
+                longitude = -122.4110,
+                timestamp = Date(System.currentTimeMillis() - 14400000),
                 soundType = SoundType.MUSIC,
-                decibelLevel = 65.0f,
-                duration = 900000 // 15 minutes
+                decibelLevel = 68.0f,
+                duration = 900000
             ),
             SoundEvent(
                 id = "5",
                 title = "Dog Barking",
-                description = "Dog in nearby yard",
-                latitude = 37.7949,
-                longitude = -122.3994,
-                timestamp = Date(System.currentTimeMillis() - 18000000), // 5 hours ago
+                description = "Dog in residential area",
+                latitude = 37.7580,      // south-ish
+                longitude = -122.4350,
+                timestamp = Date(System.currentTimeMillis() - 18000000),
                 soundType = SoundType.ANIMAL,
-                decibelLevel = 60.0f,
-                duration = 120000 // 2 minutes
+                decibelLevel = 55.0f,
+                duration = 120000
             )
         )
     }
