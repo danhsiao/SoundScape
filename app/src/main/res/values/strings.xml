@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoundScape</string>
+    <string name="home">Home</string>
+    <string name="map">Map</string>
+    <string name="scan">Scan</string>
+    <string name="history">History</string>
+    <string name="analytics">Analytics</string>
+    <string name="settings">Settings</string>
+</resources>
+

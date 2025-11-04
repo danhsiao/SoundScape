@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- TODO: Configure cloud backup rules when backend integration is added -->
+    </cloud-backup>
+</data-extraction-rules>
+
