@@ -16,6 +16,7 @@ data class SoundEvent(
     val soundType: SoundType,
     val decibelLevel: Float,
     val duration: Long, // in milliseconds
+    val environment: String? = null, // e.g., "library", "café", "Memorial Library", "Gordon Commons"
     val userId: String? = null // TODO: Get from authenticated user when backend is integrated
 )
 

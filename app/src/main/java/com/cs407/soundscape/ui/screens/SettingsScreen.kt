@@ -1,6 +1,8 @@
 package com.cs407.soundscape.ui.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -8,11 +10,19 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,11 +33,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen() {
     var darkModeEnabled by remember { mutableStateOf(false) }
     var notificationsEnabled by remember { mutableStateOf(true) }
     var locationTrackingEnabled by remember { mutableStateOf(true) }
+    var dataContributionEnabled by remember { mutableStateOf(true) }
+    var anonymousModeEnabled by remember { mutableStateOf(false) }
+    var selectedUnit by remember { mutableStateOf("dB (Decibels)") }
+    var showUnitDropdown by remember { mutableStateOf(false) }
+    
+    val unitOptions = listOf("dB (Decibels)", "dB SPL", "dB A-weighted")
 
     Column(
         modifier = Modifier
@@ -63,6 +80,108 @@ fun SettingsScreen() {
             checked = locationTrackingEnabled,
             onCheckedChange = { locationTrackingEnabled = it }
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Data Contribution Preferences
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant
+            )
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+                Text(
+                    text = "Data Contribution",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                SettingCard(
+                    title = "Share Data",
+                    description = "Contribute your recordings to help the community",
+                    checked = dataContributionEnabled,
+                    onCheckedChange = { dataContributionEnabled = it }
+                )
+                
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                SettingCard(
+                    title = "Anonymous Mode",
+                    description = "Share data without linking to your account",
+                    checked = anonymousModeEnabled,
+                    onCheckedChange = { anonymousModeEnabled = it }
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Unit Selection
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant
+            )
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+                Text(
+                    text = "Unit Selection",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = "Choose how noise levels are displayed",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                Box {
+                    OutlinedTextField(
+                        value = selectedUnit,
+                        onValueChange = {},
+                        readOnly = true,
+                        label = { Text("Noise level unit") },
+                        trailingIcon = {
+                            Icon(
+                                imageVector = Icons.Default.ArrowDropDown,
+                                contentDescription = "Dropdown"
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { showUnitDropdown = true },
+                        colors = TextFieldDefaults.outlinedTextFieldColors()
+                    )
+                    DropdownMenu(
+                        expanded = showUnitDropdown,
+                        onDismissRequest = { showUnitDropdown = false },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        unitOptions.forEach { unit ->
+                            DropdownMenuItem(
+                                text = { Text(unit) },
+                                onClick = {
+                                    selectedUnit = unit
+                                    showUnitDropdown = false
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+        }
 
         Spacer(modifier = Modifier.height(16.dp))
 

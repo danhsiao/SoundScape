@@ -126,12 +126,21 @@ fun HistoryEventCard(event: SoundEvent) {
                 )
             }
             
-            // TODO: Add location display when map integration is added
+            if (event.environment != null) {
+                Spacer(modifier = Modifier.padding(top = 4.dp))
+                Text(
+                    text = "📍 ${event.environment}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Medium
+                )
+            }
+            
+            Spacer(modifier = Modifier.padding(top = 4.dp))
             Text(
                 text = "📍 ${String.format("%.4f", event.latitude)}, ${String.format("%.4f", event.longitude)}",
                 style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(top = 4.dp)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }

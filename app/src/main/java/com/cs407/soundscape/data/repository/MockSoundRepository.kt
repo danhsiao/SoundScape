@@ -55,54 +55,59 @@ class MockSoundRepository {
                 description = "Heavy traffic on Market St",
                 latitude = 37.7760,
                 longitude = -122.4170,
-                timestamp = Date(System.currentTimeMillis() - 3600000),
+                timestamp = Date(System.currentTimeMillis() - 900000), // 15 minutes ago
                 soundType = SoundType.TRAFFIC,
                 decibelLevel = 78.0f,
-                duration = 300000
+                duration = 300000,
+                environment = "Market Street"
             ),
             SoundEvent(
                 id = "2",
                 title = "Birds Chirping",
                 description = "Morning birds in the park",
-                latitude = 37.7694,      // Dolores Park area
-                longitude = -122.4862 + 0.06,
-                timestamp = Date(System.currentTimeMillis() - 7200000),
+                latitude = 37.7694,
+                longitude = -122.4262,
+                timestamp = Date(System.currentTimeMillis() - 1500000), // 25 minutes ago
                 soundType = SoundType.NATURE,
                 decibelLevel = 35.0f,
-                duration = 600000
+                duration = 600000,
+                environment = "Dolores Park"
             ),
             SoundEvent(
                 id = "3",
                 title = "Construction Site",
                 description = "Building construction nearby",
-                latitude = 37.7890,      // closer to Embarcadero
+                latitude = 37.7890,
                 longitude = -122.3910,
-                timestamp = Date(System.currentTimeMillis() - 10800000),
+                timestamp = Date(System.currentTimeMillis() - 2400000), // 40 minutes ago
                 soundType = SoundType.CONSTRUCTION,
                 decibelLevel = 95.0f,
-                duration = 1800000
+                duration = 1800000,
+                environment = "Embarcadero Project"
             ),
             SoundEvent(
                 id = "4",
                 title = "Street Musician",
                 description = "Guitarist in North Beach",
-                latitude = 37.8040,      // north
+                latitude = 37.8040,
                 longitude = -122.4110,
-                timestamp = Date(System.currentTimeMillis() - 14400000),
+                timestamp = Date(System.currentTimeMillis() - 3000000), // 50 minutes ago
                 soundType = SoundType.MUSIC,
                 decibelLevel = 68.0f,
-                duration = 900000
+                duration = 900000,
+                environment = "North Beach Plaza"
             ),
             SoundEvent(
                 id = "5",
                 title = "Dog Barking",
                 description = "Dog in residential area",
-                latitude = 37.7580,      // south-ish
+                latitude = 37.7580,
                 longitude = -122.4350,
-                timestamp = Date(System.currentTimeMillis() - 18000000),
+                timestamp = Date(System.currentTimeMillis() - 3300000), // 55 minutes ago
                 soundType = SoundType.ANIMAL,
                 decibelLevel = 55.0f,
-                duration = 120000
+                duration = 120000,
+                environment = "Mission District"
             )
         )
     }

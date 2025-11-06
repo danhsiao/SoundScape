@@ -2,7 +2,10 @@ package com.cs407.soundscape.data.repository
 
 import com.cs407.soundscape.data.model.AnalyticsData
 import com.cs407.soundscape.data.model.DailyEventCount
+import com.cs407.soundscape.data.model.ForecastTrend
 import com.cs407.soundscape.data.model.LocationStats
+import com.cs407.soundscape.data.model.NoiseForecast
+import com.cs407.soundscape.data.model.QuietSpot
 import com.cs407.soundscape.data.model.SoundType
 
 /**
@@ -45,13 +48,78 @@ class MockAnalyticsRepository(private val soundRepository: MockSoundRepository) 
             .sortedByDescending { it.eventCount }
             .take(5)
         
+        // Top 5 Quiet Spots Now (user feedback requirement)
+        // Get recent events (within last hour) grouped by environment, sorted by decibel
+        val recentEvents = events.filter { 
+            System.currentTimeMillis() - it.timestamp.time < 3600000 // Last hour
+        }
+        
+        val topQuietSpots = recentEvents
+            .groupBy { it.environment ?: "Unknown" }
+            .map { (env, envEvents) ->
+                val avgDecibel = envEvents.map { it.decibelLevel }.average().toFloat()
+                val latestEvent = envEvents.maxByOrNull { it.timestamp.time }!!
+                QuietSpot(
+                    name = env,
+                    latitude = latestEvent.latitude,
+                    longitude = latestEvent.longitude,
+                    currentDecibel = avgDecibel,
+                    environment = env
+                )
+            }
+            .sortedBy { it.currentDecibel } // Sort by quietest first
+            .take(5)
+        
+        // EWMA-based forecasts (mock implementation)
+        // TODO: Replace with actual EWMA calculation when backend is integrated
+        val forecasts = listOf(
+            NoiseForecast(
+                locationName = "Memorial Library",
+                latitude = 43.0756,
+                longitude = -89.4042,
+                currentDecibel = 32.0f,
+                forecastedDecibel = 34.0f, // EWMA prediction
+                trend = ForecastTrend.UP,
+                confidence = 0.75f
+            ),
+            NoiseForecast(
+                locationName = "Gordon Commons",
+                latitude = 43.0738,
+                longitude = -89.4012,
+                currentDecibel = 68.0f,
+                forecastedDecibel = 65.0f,
+                trend = ForecastTrend.DOWN,
+                confidence = 0.82f
+            ),
+            NoiseForecast(
+                locationName = "College Library",
+                latitude = 43.0745,
+                longitude = -89.4035,
+                currentDecibel = 28.0f,
+                forecastedDecibel = 29.0f,
+                trend = ForecastTrend.STABLE,
+                confidence = 0.88f
+            ),
+            NoiseForecast(
+                locationName = "Union South",
+                latitude = 43.0708,
+                longitude = -89.4065,
+                currentDecibel = 55.0f,
+                forecastedDecibel = 58.0f,
+                trend = ForecastTrend.UP,
+                confidence = 0.70f
+            )
+        )
+        
         return AnalyticsData(
             totalEvents = totalEvents,
             averageDecibel = averageDecibel,
             eventsByType = eventsByType,
             eventsByDay = eventsByDay,
             peakHours = peakHours,
-            topLocations = topLocations
+            topLocations = topLocations,
+            topQuietSpots = topQuietSpots,
+            forecasts = forecasts
         )
     }
 }
