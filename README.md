@@ -124,16 +124,6 @@ An optional `local.defaults.properties` file can provide fallback values, but pr
 
 ---
 
-## Running & Testing
-
-### Run on Emulator / Device
-1. Select a device running Android 8.0 (API 26) or higher.
-2. In Android Studio, click **Run ▶︎** or use:
-   ```bash
-   ./gradlew installDebug
-   ```
-3. The app will launch with mock data populating all screens.
-
 ### Manual Verification Checklist
 - **Home:** Confirm quick action cards and recent events appear.
 - **Map:** Verify heatmap renders and filters toggle sound ranges.
@@ -177,11 +167,6 @@ Planned enhancements:
 | Michael Tang | mltang2@wisc.edu | [@mltang2](https://github.com/mltang2) |
 
 ---
-
-## License
-
-This project is currently unlicensed. All rights reserved by the SoundScape team. Add a license file if you plan to open-source or distribute the application publicly.
-
 ---
 
 If you have questions, file an issue in the repository or reach out to any team member listed above. Enjoy exploring the SoundScape! 🎧🗺️
