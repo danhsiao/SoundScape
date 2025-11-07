@@ -22,11 +22,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.cs407.soundscape.ui.screens.AnalyticsScreen
-import com.cs407.soundscape.ui.screens.HistoryScreen
+//import com.cs407.soundscape.ui.screens.AnalyticsScreen
+//import com.cs407.soundscape.ui.screens.HistoryScreen
 import com.cs407.soundscape.ui.screens.HomeScreen
 import com.cs407.soundscape.ui.screens.MapScreen
-import com.cs407.soundscape.ui.screens.ScanScreen
+//import com.cs407.soundscape.ui.screens.ScanScreen
 import com.cs407.soundscape.ui.screens.SettingsScreen
 
 @Composable
@@ -107,13 +107,13 @@ fun SoundScapeNavigation() {
                 MapScreen()
             }
             composable(Screen.Scan.route) {
-                ScanScreen()
+                //ScanScreen()
             }
             composable(Screen.History.route) {
-                HistoryScreen()
+                //HistoryScreen()
             }
             composable(Screen.Analytics.route) {
-                AnalyticsScreen()
+                //AnalyticsScreen()
             }
             composable(Screen.Settings.route) {
                 SettingsScreen()

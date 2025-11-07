@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analytics">Analytics</string>
+    <string name="app_name">SoundScape</string>
+    <string name="gcm_defaultSenderId" translatable="false">370637449461</string>
+    <string name="google_api_key" translatable="false">AIzaSyDGXeu5a9RAOUygBnGGAdlu5KAuapMWl9s</string>
+    <string name="google_app_id" translatable="false">1:370637449461:android:5530f815fb29dc63aafdbc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDGXeu5a9RAOUygBnGGAdlu5KAuapMWl9s</string>
+    <string name="google_storage_bucket" translatable="false">soundscape-e5546.firebasestorage.app</string>
+    <string name="history">History</string>
+    <string name="home">Home</string>
+    <string name="map">Map</string>
+    <string name="project_id" translatable="false">soundscape-e5546</string>
+    <string name="scan">Scan</string>
+    <string name="settings">Settings</string>
+    <style name="Theme.SoundScape" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.cs407.soundscape.app-merged_res-59:/xml_backup_rules.xml.flat",
+        "source": "com.cs407.soundscape.app-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.cs407.soundscape.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.cs407.soundscape.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.cs407.soundscape.app-merged_res-59:/xml_data_extraction_rules.xml.flat",
+        "source": "com.cs407.soundscape.app-main-61:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.cs407.soundscape.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.cs407.soundscape.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]
