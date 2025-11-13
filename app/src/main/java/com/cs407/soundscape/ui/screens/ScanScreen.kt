@@ -1,5 +1,12 @@
 package com.cs407.soundscape.ui.screens
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.media.AudioFormat
+import android.media.AudioRecord
+import android.media.MediaRecorder
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -28,23 +35,193 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlin.math.log10
+import kotlin.math.sqrt
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScanScreen() {
     var isRecording by remember { mutableStateOf(false) }
     var decibelLevel by remember { mutableStateOf(0f) }
+    var averageDecibel by remember { mutableStateOf<Float?>(null) }
     var selectedEnvironment by remember { mutableStateOf<String?>(null) }
     var customEnvironment by remember { mutableStateOf("") }
     var showDropdown by remember { mutableStateOf(false) }
+    var remainingSeconds by remember { mutableStateOf(10) }
+    var permissionDenied by remember { mutableStateOf(false) }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
+    var decibelAccumulation by remember { mutableStateOf(0f) }
+    var decibelSampleCount by remember { mutableStateOf(0) }
+
+    val context = LocalContext.current
+    val coroutineScope = rememberCoroutineScope()
+
+    val microphonePermissionGranted = remember {
+        mutableStateOf(
+            ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.RECORD_AUDIO
+            ) == PackageManager.PERMISSION_GRANTED
+        )
+    }
+
+    val recordingSampleRate = 44100
+    val minBufferSize = remember {
+        val size = AudioRecord.getMinBufferSize(
+            recordingSampleRate,
+            AudioFormat.CHANNEL_IN_MONO,
+            AudioFormat.ENCODING_PCM_16BIT
+        )
+        if (size <= 0) recordingSampleRate else size
+    }
+
+    var audioRecord by remember { mutableStateOf<AudioRecord?>(null) }
+    var recordingJob by remember { mutableStateOf<Job?>(null) }
+    var timerJob by remember { mutableStateOf<Job?>(null) }
+
+    fun stopRecording(shouldCancelTimer: Boolean = true) {
+        recordingJob?.cancel()
+        recordingJob = null
+
+        audioRecord?.let {
+            try {
+                it.stop()
+            } catch (_: IllegalStateException) {
+            }
+            it.release()
+        }
+        audioRecord = null
+
+        if (shouldCancelTimer) {
+            timerJob?.cancel()
+        }
+        timerJob = null
+
+        if (decibelSampleCount > 0) {
+            averageDecibel = decibelAccumulation / decibelSampleCount
+        }
+
+        remainingSeconds = 0
+        isRecording = false
+    }
+
+    fun beginRecordingSession() {
+        if (isRecording) return
+
+        remainingSeconds = 10
+        averageDecibel = null
+        decibelAccumulation = 0f
+        decibelSampleCount = 0
+        decibelLevel = 0f
+        permissionDenied = false
+        errorMessage = null
+
+        val audioRecorder = AudioRecord(
+            MediaRecorder.AudioSource.MIC,
+            recordingSampleRate,
+            AudioFormat.CHANNEL_IN_MONO,
+            AudioFormat.ENCODING_PCM_16BIT,
+            minBufferSize
+        )
+
+        if (audioRecorder.state != AudioRecord.STATE_INITIALIZED) {
+            audioRecorder.release()
+            errorMessage = "Unable to access microphone"
+            return
+        }
+
+        try {
+            audioRecorder.startRecording()
+        } catch (e: IllegalStateException) {
+            audioRecorder.release()
+            errorMessage = "Failed to start recording: ${e.localizedMessage ?: "Unknown error"}"
+            return
+        }
+
+        audioRecord = audioRecorder
+        isRecording = true
+
+        recordingJob = coroutineScope.launch(Dispatchers.Default) {
+            val buffer = ShortArray(minBufferSize)
+            while (isActive) {
+                val read = audioRecorder.read(buffer, 0, buffer.size)
+                if (read > 0) {
+                    var sumSquares = 0.0
+                    for (i in 0 until read) {
+                        val normalized = buffer[i] / 32768.0
+                        sumSquares += normalized * normalized
+                    }
+                    val meanSquare = sumSquares / read
+                    val amplitude = sqrt(meanSquare)
+                    val decibels = if (amplitude <= 0.00001) {
+                        0f
+                    } else {
+                        (20 * log10(amplitude) + 94).toFloat().coerceIn(0f, 120f)
+                    }
+
+                    withContext(Dispatchers.Main) {
+                        decibelLevel = decibels
+                        decibelAccumulation += decibels
+                        decibelSampleCount += 1
+                    }
+                }
+            }
+        }
+
+        timerJob = coroutineScope.launch {
+            for (second in 10 downTo 1) {
+                remainingSeconds = second
+                delay(1_000)
+                if (!isRecording) return@launch
+            }
+            stopRecording(shouldCancelTimer = false)
+        }
+    }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission(),
+        onResult = { granted ->
+            microphonePermissionGranted.value = granted
+            permissionDenied = !granted
+            if (granted) {
+                permissionDenied = false
+                errorMessage = null
+                beginRecordingSession()
+            }
+        }
+    )
+
+    fun startRecording() {
+        if (!microphonePermissionGranted.value) {
+            permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+        } else {
+            beginRecordingSession()
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            stopRecording()
+        }
+    }
     
     val commonEnvironments = listOf(
         "Memorial Library",
@@ -119,10 +296,22 @@ fun ScanScreen() {
         }
 
         Text(
-            text = if (isRecording) "Recording (5-10s)..." else "Ready to Scan",
+            text = when {
+                isRecording -> "Recording... ${remainingSeconds}s left"
+                averageDecibel != null -> "Recording complete"
+                else -> "Ready to Scan"
+            },
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold
         )
+
+        if (averageDecibel != null && !isRecording) {
+            Text(
+                text = "Average noise level: ${String.format("%.1f", averageDecibel)} dB",
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium
+            )
+        }
 
         // Environment selection
         Card(
@@ -196,16 +385,10 @@ fun ScanScreen() {
 
         Button(
             onClick = {
-                isRecording = !isRecording
-                // TODO: Start/stop audio recording when backend is integrated
-                // TODO: Request microphone permission
-                // TODO: Use AudioRecord or MediaRecorder API
-                // TODO: Calculate decibel levels from audio buffer
-                // TODO: Capture GPS location
-                // TODO: Save to backend with environment label
                 if (isRecording) {
-                    // Simulate decibel reading
-                    decibelLevel = 65.5f
+                    stopRecording()
+                } else {
+                    startRecording()
                 }
             },
             colors = ButtonDefaults.buttonColors(
@@ -219,6 +402,30 @@ fun ScanScreen() {
             Text(
                 text = if (isRecording) "Stop Recording" else "Start Recording (5-10s)",
                 modifier = Modifier.padding(vertical = 8.dp)
+            )
+        }
+
+        if (permissionDenied) {
+            Text(
+                text = "Microphone permission is required to record noise levels.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.error
+            )
+        }
+
+        if (!microphonePermissionGranted.value && !permissionDenied && !isRecording) {
+            Text(
+                text = "Tap start to allow microphone access for recording.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        errorMessage?.let { message ->
+            Text(
+                text = message,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.error
             )
         }
         

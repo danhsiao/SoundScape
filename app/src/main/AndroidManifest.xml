@@ -8,8 +8,7 @@
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- TODO: Add camera permission for Scan feature -->
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
-    <!-- TODO: Add microphone permission for audio recording -->
-    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
