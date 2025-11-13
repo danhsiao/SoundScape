@@ -49,7 +49,6 @@ fun HomeScreen(
     val repository = remember { MockSoundRepository() }
     var recentEvents by remember { mutableStateOf<List<SoundEvent>>(emptyList()) }
     
-    // TODO: Load from ViewModel/Repository when backend is integrated
     recentEvents = remember { repository.getAllEvents().take(5) }
 
     LazyColumn(
