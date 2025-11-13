@@ -1,9 +1,8 @@
 package com.cs407.soundscape.ui.screens
 
 import android.Manifest
-import android.annotation.SuppressLint
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -13,6 +12,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.cs407.soundscape.data.model.SoundEvent
@@ -31,117 +31,87 @@ import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
-import androidx.compose.ui.graphics.toArgb
 
-@SuppressLint("MissingPermission") // we gate calls on hasLocationPermission
 @Composable
 fun MapScreen() {
-    val ctx = LocalContext.current
+    // Repository and base data
     val repository = remember { MockSoundRepository() }
     val allEvents = remember { repository.getAllEvents() }
 
-    // selected bottom-sheet event
+    // Selected event shown in bottom sheet
     var selectedEvent by remember { mutableStateOf<SoundEvent?>(null) }
 
-    // location permission state
-    var hasLocationPermission by remember { mutableStateOf(false) }
+    // Legend filter toggles
+    var showQuiet by remember { mutableStateOf(true) }
+    var showModerate by remember { mutableStateOf(true) }
+    var showLoud by remember { mutableStateOf(true) }
 
-    // device location (if we get it)
-    var currentLatLng by remember { mutableStateOf<LatLng?>(null) }
-
-    // filters
-    var showQuiet by remember { mutableStateOf(true) }     // < 50
-    var showModerate by remember { mutableStateOf(true) }  // 50–75
-    var showLoud by remember { mutableStateOf(true) }      // > 75
-
+    // Apply filters to events used by heatmap and tap selection
     val filteredEvents = remember(allEvents, showQuiet, showModerate, showLoud) {
         allEvents.filter { e ->
-            val dB = e.decibelLevel
-            when {
-                dB < 50f -> showQuiet
-                dB in 50f..75f -> showModerate
+            when (e.decibelLevel) {
+                in Float.NEGATIVE_INFINITY..50f -> showQuiet
+                in 50f..75f -> showModerate
                 else -> showLoud
             }
         }
     }
 
-    // start camera: use current location if we get it; otherwise first event or SF
-    val fallbackLatLng = if (allEvents.isNotEmpty()) {
+    // Initial map target (fallback if no location yet)
+    val startLatLng = if (allEvents.isNotEmpty())
         LatLng(allEvents.first().latitude, allEvents.first().longitude)
-    } else LatLng(37.7749, -122.4194)
+    else LatLng(37.7749, -122.4194)
 
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(fallbackLatLng, 12f)
+        position = CameraPosition.fromLatLngZoom(startLatLng, 12f)
     }
     val scope = rememberCoroutineScope()
 
-    // request permission launcher
-    val permLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { result ->
-        val fine = result[Manifest.permission.ACCESS_FINE_LOCATION] == true
-        val coarse = result[Manifest.permission.ACCESS_COARSE_LOCATION] == true
-        hasLocationPermission = fine || coarse
-    }
+    // Permission check and "blue dot" setup
+    val context = LocalContext.current
+    val hasFine = ActivityCompat.checkSelfPermission(
+        context, Manifest.permission.ACCESS_FINE_LOCATION
+    ) == PackageManager.PERMISSION_GRANTED
+    val hasCoarse = ActivityCompat.checkSelfPermission(
+        context, Manifest.permission.ACCESS_COARSE_LOCATION
+    ) == PackageManager.PERMISSION_GRANTED
+    val locationEnabled = hasFine || hasCoarse
 
-    // kick off permission request once
-    LaunchedEffect(Unit) {
-        permLauncher.launch(
-            arrayOf(
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            )
-        )
-    }
+    // Last-known device location (when available)
+    var currentLatLng by remember { mutableStateOf<LatLng?>(null) }
 
-    // once we have permission, fetch last known location and animate
-    LaunchedEffect(hasLocationPermission) {
-        if (hasLocationPermission) {
-            val fused = LocationServices.getFusedLocationProviderClient(ctx)
-            fused.lastLocation
-                .addOnSuccessListener { loc ->
-                    loc?.let {
-                        val here = LatLng(it.latitude, it.longitude)
-                        currentLatLng = here
-                        scope.launch {
-                            cameraPositionState.animate(
-                                CameraUpdateFactory.newLatLngZoom(here, 14f)
-                            )
-                        }
+    // Map UI controls and properties
+    val uiSettings = remember { MapUiSettings(zoomControlsEnabled = true, compassEnabled = true) }
+    val mapProperties = remember(locationEnabled) { MapProperties(isMyLocationEnabled = locationEnabled) }
+
+    // On first load, pan camera to device location if permission granted
+    LaunchedEffect(locationEnabled) {
+        if (locationEnabled) {
+            val fused = LocationServices.getFusedLocationProviderClient(context)
+            fused.lastLocation.addOnSuccessListener { loc ->
+                if (loc != null) {
+                    val here = LatLng(loc.latitude, loc.longitude)
+                    currentLatLng = here
+                    scope.launch {
+                        cameraPositionState.animate(
+                            CameraUpdateFactory.newLatLngZoom(here, 13.5f)
+                        )
                     }
                 }
+            }
         }
     }
 
-    // map properties: enable My Location (blue dot) when allowed
-    val mapProperties by remember(hasLocationPermission) {
-        mutableStateOf(
-            MapProperties(
-                isMyLocationEnabled = hasLocationPermission
-            )
-        )
-    }
-    val mapUiSettings = remember {
-        MapUiSettings(
-            zoomControlsEnabled = true,
-            myLocationButtonEnabled = false,
-            compassEnabled = true,
-            mapToolbarEnabled = true
-
-        )
-    }
-
-    // heatmap provider from filtered events
-    val heatmapProvider = remember(filteredEvents) {
+    // Heatmap provider: weight by decibel + custom gradient
+    val heatmapProvider: HeatmapTileProvider? = remember(filteredEvents) {
+        if (filteredEvents.isEmpty()) return@remember null
         val minDb = 30f
         val maxDb = 100f
         val weighted = filteredEvents.map { e ->
-            val normalized = ((e.decibelLevel - minDb) / (maxDb - minDb))
-                .coerceIn(0f, 1f)
+            val normalized = ((e.decibelLevel - minDb) / (maxDb - minDb)).coerceIn(0f, 1f)
             val weight = 1.0 + normalized * 9.0
             WeightedLatLng(LatLng(e.latitude, e.longitude), weight)
         }
-
         val colors = intArrayOf(
             HeatmapGradientGreen.toArgb(),
             HeatmapGradientOrange.toArgb(),
@@ -149,7 +119,6 @@ fun MapScreen() {
         )
         val startPoints = floatArrayOf(0.1f, 0.5f, 1.0f)
         val gradient = Gradient(colors, startPoints)
-
         HeatmapTileProvider.Builder()
             .weightedData(weighted)
             .gradient(gradient)
@@ -159,53 +128,43 @@ fun MapScreen() {
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
+        // Map with heatmap overlay and tap-to-select behavior
         GoogleMap(
             modifier = Modifier.fillMaxSize(),
             cameraPositionState = cameraPositionState,
             properties = mapProperties,
-            uiSettings = mapUiSettings,
+            uiSettings = uiSettings,
             onMapClick = { tapLatLng ->
-                selectedEvent = findNearestEvent(
-                    tapLatLng = tapLatLng,
-                    events = filteredEvents,
-                    maxDistanceMeters = 200.0
-                )
+                selectedEvent = findNearestEvent(tapLatLng, filteredEvents, 200.0)
             }
         ) {
-            TileOverlay(tileProvider = heatmapProvider, zIndex = 1f)
+            heatmapProvider?.let { TileOverlay(tileProvider = it, zIndex = 1f) }
         }
 
-        // Legend + filters
+        // Small legend card with three sound ranges and checkboxes
         LegendWithFilters(
-            showQuiet = showQuiet,
-            onQuietChange = { showQuiet = it },
-            showModerate = showModerate,
-            onModerateChange = { showModerate = it },
-            showLoud = showLoud,
-            onLoudChange = { showLoud = it },
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(16.dp)
+            showQuiet = showQuiet, onQuietChange = { showQuiet = it },
+            showModerate = showModerate, onModerateChange = { showModerate = it },
+            showLoud = showLoud, onLoudChange = { showLoud = it },
+            modifier = Modifier.align(Alignment.TopStart).padding(16.dp)
         )
 
-        // Recenter FAB (uses current location if available; else fallback)
+        // FAB to recenter on current location (falls back to startLatLng)
         FloatingActionButton(
             onClick = {
-                val target = currentLatLng ?: fallbackLatLng
+                val target = currentLatLng ?: startLatLng
                 scope.launch {
                     cameraPositionState.animate(
-                        CameraUpdateFactory.newLatLngZoom(target, if (currentLatLng != null) 14f else 12f)
+                        CameraUpdateFactory.newLatLngZoom(target, 13.5f)
                     )
                 }
             },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(end = 3.5.dp, bottom = 100.dp)
+            modifier = Modifier.align(Alignment.BottomEnd).padding(end = 3.5.dp, bottom = 100.dp)
         ) {
-            Icon(imageVector = Icons.Default.MyLocation, contentDescription = "Recenter map")
+            Icon(Icons.Filled.MyLocation, contentDescription = "Recenter map")
         }
 
-        // Bottom info panel
+        // Bottom info panel for the selected event
         selectedEvent?.let { event ->
             Column(
                 modifier = Modifier
@@ -214,19 +173,19 @@ fun MapScreen() {
                     .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.98f))
                     .padding(16.dp)
             ) {
-                Text(text = event.title, style = MaterialTheme.typography.titleMedium)
+                Text(event.title, style = MaterialTheme.typography.titleMedium)
                 Text(
-                    text = event.description,
+                    event.description,
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
-                    text = "${event.decibelLevel} dB • ${event.soundType.name}",
+                    "${event.decibelLevel} dB • ${event.soundType.name}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.primary
                 )
                 Text(
-                    text = "📍 ${"%.4f".format(event.latitude)}, ${"%.4f".format(event.longitude)}",
+                    "📍 ${"%.4f".format(event.latitude)}, ${"%.4f".format(event.longitude)}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -244,7 +203,20 @@ private fun LegendWithFilters(
     showLoud: Boolean,
     onLoudChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier
-) { /* ... keep your existing code ... */ }
+) {
+    // Legend container pinned to top-left
+    Card(modifier = modifier.widthIn(max = 220.dp)) {
+        Column(modifier = Modifier.padding(6.dp)) {
+            Text(text = "Sound levels", style = MaterialTheme.typography.labelSmall)
+            Spacer(Modifier.height(5.dp))
+            LegendFilterRow(HeatmapQuiet, "< 50 dB (quiet)", showQuiet, onQuietChange)
+            Spacer(Modifier.height(5.dp))
+            LegendFilterRow(HeatmapModerate, "50–75 dB (moderate)", showModerate, onModerateChange)
+            Spacer(Modifier.height(5.dp))
+            LegendFilterRow(HeatmapLoud, "> 75 dB (loud)", showLoud, onLoudChange)
+        }
+    }
+}
 
 @Composable
 private fun LegendFilterRow(
@@ -252,32 +224,38 @@ private fun LegendFilterRow(
     label: String,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit
-) { /* ... keep your existing code ... */ }
+) {
+    // One legend row: swatch + label + checkbox
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 2.dp)) {
+        Box(Modifier.size(12.dp).background(color))
+        Spacer(Modifier.width(4.dp))
+        Text(label, style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+        Checkbox(checked = checked, onCheckedChange = onCheckedChange, modifier = Modifier.size(18.dp))
+    }
+}
 
+// Nearest-event lookup by distance to tap point (meters)
+private fun findNearestEvent(tapLatLng: LatLng, events: List<SoundEvent>, maxDistanceMeters: Double): SoundEvent? {
+    var nearest: SoundEvent? = null
+    var nearestDist = Double.MAX_VALUE
+    for (e in events) {
+        val d = haversineMeters(tapLatLng.latitude, tapLatLng.longitude, e.latitude, e.longitude)
+        if (d < nearestDist) {
+            nearestDist = d
+            nearest = e
+        }
+    }
+    return if (nearestDist <= maxDistanceMeters) nearest else null
+}
+
+// Great-circle distance between two lat/lng points (haversine formula)
 private fun haversineMeters(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {
     val R = 6371000.0
     val dLat = Math.toRadians(lat2 - lat1)
     val dLon = Math.toRadians(lon2 - lon1)
-    val sinLat = sin(dLat / 2)
-    val sinLon = sin(dLon / 2)
-    val a = sinLat * sinLat +
-            cos(Math.toRadians(lat1)) *
-            cos(Math.toRadians(lat2)) *
-            sinLon * sinLon
+    val a = sin(dLat / 2) * sin(dLat / 2) +
+            cos(Math.toRadians(lat1)) * cos(Math.toRadians(lat2)) *
+            sin(dLon / 2) * sin(dLon / 2)
     val c = 2 * atan2(sqrt(a), sqrt(1 - a))
     return R * c
 }
-
-private fun findNearestEvent(
-    tapLatLng: LatLng,
-    events: List<SoundEvent>,
-    maxDistanceMeters: Double
-    ): SoundEvent? {
-        var nearest: SoundEvent? = null
-        var nearestDist = Double.MAX_VALUE
-        for (e in events) {
-            val d = haversineMeters(tapLatLng.latitude, tapLatLng.longitude, e.latitude, e.longitude)
-            if (d < nearestDist) { nearestDist = d; nearest = e }
-        }
-        return if (nearestDist <= maxDistanceMeters) nearest else null
-    }
