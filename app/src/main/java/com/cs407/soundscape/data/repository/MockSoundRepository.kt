@@ -48,13 +48,15 @@ class MockSoundRepository {
     }
 
     companion object {
+        // Mountain View / Shoreline area points
         private var mockEvents = listOf(
             SoundEvent(
                 id = "1",
                 title = "Traffic Noise",
                 description = "Heavy traffic on Market St",
-                latitude = 37.7760,
-                longitude = -122.4170,
+                // US-101 by Computer History Museum
+                latitude = 37.4149,
+                longitude = -122.0770,
                 timestamp = Date(System.currentTimeMillis() - 3600000),
                 soundType = SoundType.TRAFFIC,
                 decibelLevel = 78.0f,
@@ -64,8 +66,9 @@ class MockSoundRepository {
                 id = "2",
                 title = "Birds Chirping",
                 description = "Morning birds in the park",
-                latitude = 37.7694,      // Dolores Park area
-                longitude = -122.4862 + 0.06,
+                // Shoreline Lake / Baylands edge
+                latitude = 37.4305,
+                longitude = -122.0858,
                 timestamp = Date(System.currentTimeMillis() - 7200000),
                 soundType = SoundType.NATURE,
                 decibelLevel = 35.0f,
@@ -75,8 +78,9 @@ class MockSoundRepository {
                 id = "3",
                 title = "Construction Site",
                 description = "Building construction nearby",
-                latitude = 37.7890,      // closer to Embarcadero
-                longitude = -122.3910,
+                // North Whisman / tech campus area
+                latitude = 37.4055,
+                longitude = -122.0635,
                 timestamp = Date(System.currentTimeMillis() - 10800000),
                 soundType = SoundType.CONSTRUCTION,
                 decibelLevel = 95.0f,
@@ -86,8 +90,9 @@ class MockSoundRepository {
                 id = "4",
                 title = "Street Musician",
                 description = "Guitarist in North Beach",
-                latitude = 37.8040,      // north
-                longitude = -122.4110,
+                // Castro St (Downtown Mountain View)
+                latitude = 37.3929,
+                longitude = -122.0784,
                 timestamp = Date(System.currentTimeMillis() - 14400000),
                 soundType = SoundType.MUSIC,
                 decibelLevel = 68.0f,
@@ -97,8 +102,9 @@ class MockSoundRepository {
                 id = "5",
                 title = "Dog Barking",
                 description = "Dog in residential area",
-                latitude = 37.7580,      // south-ish
-                longitude = -122.4350,
+                // Monta Loma neighborhood
+                latitude = 37.4078,
+                longitude = -122.0956,
                 timestamp = Date(System.currentTimeMillis() - 18000000),
                 soundType = SoundType.ANIMAL,
                 decibelLevel = 55.0f,
