@@ -76,7 +76,7 @@ class MockSoundRepository {
             ),
             SoundEvent(
                 id = "3",
-                title = "Construction Site",
+                title = "Construction near Gorham",
                 description = "Building construction nearby",
                 // North Whisman / tech campus area
                 latitude = 37.4055,
