@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 }
 
 secrets {
@@ -134,6 +136,9 @@ dependencies {
     // Heatmaps
     implementation("com.google.maps.android:android-maps-utils:3.8.2")
 
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    //implementation("com.google.firebase:firebase-auth")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
