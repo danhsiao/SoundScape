@@ -32,7 +32,7 @@ fun HistoryScreen() {
     // TODO: Replace with ViewModel when backend is integrated
     val repository = remember { MockSoundRepository() }
     var events by remember { mutableStateOf<List<SoundEvent>>(emptyList()) }
-    
+
     // TODO: Load from ViewModel/Repository when backend is integrated
     events = remember { repository.getAllEvents().sortedByDescending { it.timestamp } }
 
@@ -71,7 +71,7 @@ fun HistoryScreen() {
 @Composable
 fun HistoryEventCard(event: SoundEvent) {
     val dateFormat = SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault())
-    
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -99,17 +99,17 @@ fun HistoryEventCard(event: SoundEvent) {
                     color = MaterialTheme.colorScheme.primary
                 )
             }
-            
+
             Spacer(modifier = Modifier.padding(4.dp))
-            
+
             Text(
                 text = event.description,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            
+
             Spacer(modifier = Modifier.padding(8.dp))
-            
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)

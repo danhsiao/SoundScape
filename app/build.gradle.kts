@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("com.google.gms.google-services")
 }
 
 secrets {
@@ -113,6 +114,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
 
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.6")
@@ -132,6 +135,10 @@ dependencies {
     // Heatmaps
     implementation("com.google.maps.android:android-maps-utils:3.8.2")
 
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation("com.google.firebase:firebase-auth-ktx:23.1.0")
+    implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

@@ -48,6 +48,7 @@ class MockSoundRepository {
     }
 
     companion object {
+        // Mountain View / Shoreline area points
         private var mockEvents = listOf(
             SoundEvent(
                 id = "1",
@@ -75,7 +76,7 @@ class MockSoundRepository {
             ),
             SoundEvent(
                 id = "3",
-                title = "Construction Site",
+                title = "Construction near Gorham",
                 description = "Building construction nearby",
                 latitude = 37.7890,
                 longitude = -122.3910,

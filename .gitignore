@@ -1,8 +1,8 @@
-cat <<'EOF' > .gitignore
 # Generated files
 /build/
 *.apk
 *.aab
+app/build/
 
 # Local configuration
 /local.properties

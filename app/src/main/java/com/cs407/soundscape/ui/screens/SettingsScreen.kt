@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
@@ -35,7 +36,7 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsScreen() {
+fun SettingsScreen(onSignOut: () -> Unit = {}) {
     var darkModeEnabled by remember { mutableStateOf(false) }
     var notificationsEnabled by remember { mutableStateOf(true) }
     var locationTrackingEnabled by remember { mutableStateOf(true) }
@@ -201,20 +202,13 @@ fun SettingsScreen() {
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "TODO: User profile",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "TODO: Sign in/Sign out",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                // TODO: Add user authentication UI when Firebase/Supabase is integrated
-                // TODO: Display user email, profile picture
-                // TODO: Add sign out functionality
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(
+                    onClick = onSignOut,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Sign Out")
+                }
             }
         }
 
@@ -297,4 +291,3 @@ fun SettingCard(
         }
     }
 }
-
