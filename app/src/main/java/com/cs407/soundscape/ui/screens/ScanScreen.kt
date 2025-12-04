@@ -45,9 +45,9 @@ fun ScanScreen() {
             Card(
                 modifier = Modifier.size(200.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isRecording) 
-                        MaterialTheme.colorScheme.errorContainer 
-                    else 
+                    containerColor = if (isRecording)
+                        MaterialTheme.colorScheme.errorContainer
+                    else
                         MaterialTheme.colorScheme.surfaceVariant
                 ),
                 shape = MaterialTheme.shapes.large
@@ -104,9 +104,9 @@ fun ScanScreen() {
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isRecording) 
-                        MaterialTheme.colorScheme.error 
-                    else 
+                    containerColor = if (isRecording)
+                        MaterialTheme.colorScheme.error
+                    else
                         MaterialTheme.colorScheme.primary
                 ),
                 modifier = Modifier.padding(horizontal = 32.dp)

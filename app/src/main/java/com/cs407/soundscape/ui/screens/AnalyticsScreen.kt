@@ -34,7 +34,7 @@ fun AnalyticsScreen() {
     val soundRepository = remember { MockSoundRepository() }
     val analyticsRepository = remember { MockAnalyticsRepository(soundRepository) }
     var analyticsData by remember { mutableStateOf<AnalyticsData?>(null) }
-    
+
     // TODO: Load from ViewModel/Repository when backend is integrated
     analyticsData = remember { analyticsRepository.getAnalyticsData() }
 

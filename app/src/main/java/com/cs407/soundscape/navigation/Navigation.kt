@@ -35,6 +35,7 @@ import com.cs407.soundscape.ui.auth.SignUpScreen
 import com.cs407.soundscape.ui.screens.AnalyticsScreen
 import com.cs407.soundscape.ui.screens.HistoryScreen
 import com.cs407.soundscape.ui.screens.HomeScreen
+import com.cs407.soundscape.ui.screens.LoginScreen
 import com.cs407.soundscape.ui.screens.MapScreen
 import com.cs407.soundscape.ui.screens.ScanScreen
 import com.cs407.soundscape.ui.screens.SettingsScreen
@@ -66,8 +67,7 @@ fun SoundScapeNavigation() {
 
     Scaffold(
         bottomBar = {
-            // Only show bottom bar if logged in and not on auth screens
-            if (isLoggedIn && currentDestination?.route !in listOf(Screen.SignIn.route, Screen.SignUp.route)) {
+            if (currentDestination?.route != Screen.Login.route) {
                 NavigationBar {
                     bottomNavItems.forEach { screen ->
                         NavigationBarItem(
@@ -115,38 +115,21 @@ fun SoundScapeNavigation() {
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = startDestination,
+            startDestination = Screen.Login.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            // Auth screens
-            composable(Screen.SignIn.route) {
-                SignInScreen(
-                    onSignInSuccess = {
-                        isLoggedIn = true
+            composable(Screen.Login.route) {
+                LoginScreen(
+                    onAuthenticated = {
                         navController.navigate(Screen.Home.route) {
-                            popUpTo(Screen.SignIn.route) { inclusive = true }
+                            popUpTo(Screen.Login.route) {
+                                inclusive = true
+                            }
+                            launchSingleTop = true
                         }
-                    },
-                    onNavigateToSignUp = {
-                        navController.navigate(Screen.SignUp.route)
                     }
                 )
             }
-            composable(Screen.SignUp.route) {
-                SignUpScreen(
-                    onSignUpSuccess = {
-                        isLoggedIn = true
-                        navController.navigate(Screen.Home.route) {
-                            popUpTo(Screen.SignIn.route) { inclusive = true }
-                        }
-                    },
-                    onNavigateToSignIn = {
-                        navController.navigate(Screen.SignIn.route)
-                    }
-                )
-            }
-
-            // Main app screens (only accessible when logged in)
             composable(Screen.Home.route) {
                 HomeScreen(
                     onNavigateToMap = { navController.navigate(Screen.Map.route) },
@@ -199,6 +182,5 @@ private val Screen.icon: androidx.compose.ui.graphics.vector.ImageVector
         is Screen.History -> Icons.Default.History
         is Screen.Analytics -> Icons.Default.Analytics
         is Screen.Settings -> Icons.Default.Settings
-        is Screen.Test -> Icons.Default.Settings
+        is Screen.Login -> Icons.Default.Person
     }
-

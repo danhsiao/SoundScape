@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+mipmap ic_launcher
+mipmap ic_launcher_round
+string analytics
+string app_name
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string history
+string home
+string map
+string project_id
+string scan
+string settings
+style Theme.SoundScape
+xml backup_rules
+xml data_extraction_rules
