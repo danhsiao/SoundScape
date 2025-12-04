@@ -9,369 +9,405 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:5:5-67
-11-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:5:22-64
-12
-13    <!-- Include required permissions for Google Maps API to run. -->
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
-14-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
-15
-16    <uses-feature
-16-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
-17        android:glEsVersion="0x00020000"
-17-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
-18        android:required="true" />
-18-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
-19
-20    <queries>
-20-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+11-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:5:22-64
+12    <!-- TODO: Add camera permission for Scan feature -->
+13    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+14    <!-- TODO: Add microphone permission for audio recording -->
+15    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:10:5-80
+16-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:11:5-78
+17-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:11:22-76
+18
+19    <!-- Include required permissions for Google Maps API to run. -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+20-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
 21
-22        <!-- Needs to be explicitly declared on Android R+ -->
-23        <package android:name="com.google.android.apps.maps" />
-23-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
-23-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
-24    </queries>
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
 25
-26    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-26-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/27385afa832574ea5702ab40de1d13e1/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:5-98
-26-->[com.google.android.recaptcha:recaptcha:18.6.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/27385afa832574ea5702ab40de1d13e1/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:22-95
+26    <queries>
+26-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
 27
-28    <permission
-28-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-29        android:name="com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-29-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-30        android:protectionLevel="signature" />
-30-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+28        <!-- Needs to be explicitly declared on Android R+ -->
+29        <package android:name="com.google.android.apps.maps" />
+29-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+29-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+30    </queries>
 31
-32    <uses-permission android:name="com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- TODO: Add location permissions when backend integration is added -->
-32-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-32-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-33    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
-34    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
-35    <!-- TODO: Add camera permission for Scan feature -->
-36    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
-37    <!-- TODO: Add microphone permission for audio recording -->
-38    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
-39    <application
-39-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:14:5-36:19
-40        android:allowBackup="true"
-40-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:15:9-35
-41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d829d06bc6e91d7d7d4dadae56d243f5/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-42        android:dataExtractionRules="@xml/data_extraction_rules"
-42-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:16:9-65
-43        android:debuggable="true"
-44        android:extractNativeLibs="false"
-45        android:fullBackupContent="@xml/backup_rules"
-45-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:17:9-54
-46        android:icon="@android:drawable/sym_def_app_icon"
-46-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:18:9-58
-47        android:label="@string/app_name"
-47-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:19:9-41
-48        android:roundIcon="@android:drawable/sym_def_app_icon"
-48-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:20:9-63
-49        android:supportsRtl="true"
-49-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:21:9-35
-50        android:testOnly="true"
-51        android:theme="@style/Theme.SoundScape" >
-51-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:22:9-48
-52        <activity
-52-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:24:9-32:20
-53            android:name="com.cs407.soundscape.MainActivity"
-53-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:25:13-41
-54            android:exported="true"
-54-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:26:13-36
-55            android:theme="@style/Theme.SoundScape" >
-55-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:27:13-52
-56            <intent-filter>
-56-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:28:13-31:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:29:17-69
-57-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:29:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:30:17-77
-59-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:30:27-74
-60            </intent-filter>
-61        </activity>
-62
-63        <meta-data
-64            android:name="com.google.android.geo.API_KEY"
-64-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:34:13-58
-65            android:value="AIzaSyBaUyN6I12_lVdZCUfTjEyudrlGPDS1e2c" />
-65-->/Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:35:13-44
-66
-67        <activity
-67-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8341daec7553fceb2a2b688542fcd6b7/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-68            android:name="androidx.compose.ui.tooling.PreviewActivity"
-68-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8341daec7553fceb2a2b688542fcd6b7/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-69            android:exported="true" />
-69-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8341daec7553fceb2a2b688542fcd6b7/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-70        <activity
-70-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/062375f868166289a468b9c88e18761c/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
-71            android:name="androidx.activity.ComponentActivity"
-71-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/062375f868166289a468b9c88e18761c/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
-72            android:exported="true" />
-72-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/062375f868166289a468b9c88e18761c/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
-73
-74        <meta-data
-74-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2efedb9c1bf70fe44a3c481162d9bcd3/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
-75            android:name="com.google.android.gms.version"
-75-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2efedb9c1bf70fe44a3c481162d9bcd3/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
-76            android:value="@integer/google_play_services_version" /> <!-- Needs to be explicitly declared on P+ -->
-76-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2efedb9c1bf70fe44a3c481162d9bcd3/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
-77        <uses-library
-77-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
-78            android:name="org.apache.http.legacy"
-78-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
-79            android:required="false" />
-79-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eba0f2989bd2a97dd03ad9887ff65267/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
-80
-81        <activity
-81-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:29:9-46:20
-82            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-82-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:30:13-80
-83            android:excludeFromRecents="true"
-83-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:31:13-46
-84            android:exported="true"
-84-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:32:13-36
-85            android:launchMode="singleTask"
-85-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:33:13-44
-86            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-86-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:34:13-72
-87            <intent-filter>
-87-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:35:13-45:29
-88                <action android:name="android.intent.action.VIEW" />
-88-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:36:17-69
-88-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:36:25-66
-89
-90                <category android:name="android.intent.category.DEFAULT" />
-90-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:38:17-76
-90-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:38:27-73
-91                <category android:name="android.intent.category.BROWSABLE" />
-91-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:39:17-78
-91-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:39:27-75
-92
-93                <data
-93-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:41:17-44:51
-94                    android:host="firebase.auth"
-94-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:42:21-49
-95                    android:path="/"
-95-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:43:21-37
-96                    android:scheme="genericidp" />
-96-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:44:21-48
-97            </intent-filter>
-98        </activity>
-99        <activity
-99-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:47:9-64:20
-100            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-100-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:48:13-79
-101            android:excludeFromRecents="true"
-101-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:49:13-46
-102            android:exported="true"
-102-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:50:13-36
-103            android:launchMode="singleTask"
-103-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:51:13-44
-104            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-104-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:52:13-72
-105            <intent-filter>
-105-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:53:13-63:29
-106                <action android:name="android.intent.action.VIEW" />
-106-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:36:17-69
-106-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:36:25-66
-107
-108                <category android:name="android.intent.category.DEFAULT" />
-108-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:38:17-76
-108-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:38:27-73
-109                <category android:name="android.intent.category.BROWSABLE" />
-109-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:39:17-78
-109-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:39:27-75
-110
-111                <data
-111-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:41:17-44:51
-112                    android:host="firebase.auth"
-112-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:42:21-49
-113                    android:path="/"
-113-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:43:21-37
-114                    android:scheme="recaptcha" />
-114-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:44:21-48
-115            </intent-filter>
-116        </activity>
+32    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+32-->[com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:5-98
+32-->[com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:22-95
+33
+34    <permission
+34-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+35        android:name="com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+35-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+36        android:protectionLevel="signature" />
+36-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+37
+38    <uses-permission android:name="com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+38-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+38-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+39
+40    <application
+40-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:14:5-36:19
+41        android:allowBackup="true"
+41-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:15:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+43        android:dataExtractionRules="@xml/data_extraction_rules"
+43-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:16:9-65
+44        android:debuggable="true"
+45        android:extractNativeLibs="false"
+46        android:fullBackupContent="@xml/backup_rules"
+46-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:17:9-54
+47        android:icon="@android:drawable/sym_def_app_icon"
+47-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:18:9-58
+48        android:label="@string/app_name"
+48-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:19:9-41
+49        android:roundIcon="@android:drawable/sym_def_app_icon"
+49-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:20:9-63
+50        android:supportsRtl="true"
+50-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:21:9-35
+51        android:testOnly="true"
+52        android:theme="@style/Theme.SoundScape" >
+52-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:22:9-48
+53        <activity
+53-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:24:9-32:20
+54            android:name="com.cs407.soundscape.MainActivity"
+54-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:25:13-41
+55            android:exported="true"
+55-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:26:13-36
+56            android:theme="@style/Theme.SoundScape" >
+56-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:27:13-52
+57            <intent-filter>
+57-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:28:13-31:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:29:17-69
+58-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:29:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:30:17-77
+60-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:30:27-74
+61            </intent-filter>
+62        </activity>
+63
+64        <meta-data
+65            android:name="com.google.android.geo.API_KEY"
+65-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:34:13-58
+66            android:value="AIzaSyBaUyN6I12_lVdZCUfTjEyudrlGPDS1e2c" />
+66-->/Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:35:13-44
+67
+68        <activity
+68-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+69            android:name="androidx.compose.ui.tooling.PreviewActivity"
+69-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+70            android:exported="true" />
+70-->[androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+71        <activity
+71-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
+72            android:name="androidx.activity.ComponentActivity"
+72-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
+73            android:exported="true" />
+73-->[androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
+74
+75        <meta-data
+75-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
+76            android:name="com.google.android.gms.version"
+76-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
+77            android:value="@integer/google_play_services_version" /> <!-- Needs to be explicitly declared on P+ -->
+77-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
+78        <uses-library
+78-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+79            android:name="org.apache.http.legacy"
+79-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+80            android:required="false" />
+80-->[com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+81
+82        <service
+82-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:9:9-15:19
+83            android:name="com.google.firebase.components.ComponentDiscoveryService"
+83-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:10:13-84
+84            android:directBootAware="true"
+84-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+85            android:exported="false" >
+85-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:11:13-37
+86            <meta-data
+86-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:12:13-14:85
+87                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar"
+87-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:13:17-129
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:14:17-82
+89            <meta-data
+89-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:17:13-19:85
+90                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+90-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:18:17-122
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:19:17-82
+92            <meta-data
+92-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:20:13-22:85
+93                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+93-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:21:17-111
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:22:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:11:13-13:85
+96                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+96-->[com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:12:17-119
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:13:17-82
+98            <meta-data
+98-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:69:13-71:85
+99                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+99-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:70:17-109
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:71:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+102                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+102-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+104            <meta-data
+104-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+105                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+105-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+107        </service>
+108
+109        <activity
+109-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:29:9-46:20
+110            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+110-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:30:13-80
+111            android:excludeFromRecents="true"
+111-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:31:13-46
+112            android:exported="true"
+112-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:32:13-36
+113            android:launchMode="singleTask"
+113-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:33:13-44
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+114-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:34:13-72
+115            <intent-filter>
+115-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:35:13-45:29
+116                <action android:name="android.intent.action.VIEW" />
+116-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+116-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
 117
-118        <service
-118-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:66:9-72:19
-119            android:name="com.google.firebase.components.ComponentDiscoveryService"
-119-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:67:13-84
-120            android:directBootAware="true"
-120-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:32:13-43
-121            android:exported="false" >
-121-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:68:13-37
-122            <meta-data
-122-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:69:13-71:85
-123                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-123-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:70:17-109
-124                android:value="com.google.firebase.components.ComponentRegistrar" />
-124-->[com.google.firebase:firebase-auth:24.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/21494bd94be93f2771d62e352756bd04/transformed/firebase-auth-24.0.1/AndroidManifest.xml:71:17-82
-125            <meta-data
-125-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:35:13-37:85
-126                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-126-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:36:17-109
-127                android:value="com.google.firebase.components.ComponentRegistrar" />
-127-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:37:17-82
-128        </service>
-129        <service
-129-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
-130            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
-130-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
-131            android:enabled="true"
-131-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
-132            android:exported="false" >
-132-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
-133            <meta-data
-133-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
-134                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
-134-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
-135                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
-135-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
-136        </service>
-137
-138        <activity
-138-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
-139            android:name="androidx.credentials.playservices.HiddenActivity"
-139-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
-140            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-140-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
-141            android:enabled="true"
-141-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
-142            android:exported="false"
-142-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
-143            android:fitsSystemWindows="true"
-143-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
-144            android:theme="@style/Theme.Hidden" >
-144-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1cce2d1b1886662121f05b24e14a27ed/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
-145        </activity>
-146        <activity
-146-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
-147            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-147-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
-148            android:excludeFromRecents="true"
-148-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
-149            android:exported="false"
-149-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
-150            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-150-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
-151        <!--
-152            Service handling Google Sign-In user revocation. For apps that do not integrate with
-153            Google Sign-In, this service will never be started.
-154        -->
-155        <service
-155-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
-156            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-156-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
-157            android:exported="true"
-157-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
-158            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-158-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
-159            android:visibleToInstantApps="true" />
-159-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8265513d1bc4276708cf000dfb51b0c9/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
-160
-161        <activity
-161-->[com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/378c81d14e7848d3e63a721d9fb0f19e/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-162            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-162-->[com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/378c81d14e7848d3e63a721d9fb0f19e/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-163            android:exported="false"
-163-->[com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/378c81d14e7848d3e63a721d9fb0f19e/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-164            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-164-->[com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/378c81d14e7848d3e63a721d9fb0f19e/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-165
-166        <provider
-166-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:23:9-28:39
-167            android:name="com.google.firebase.provider.FirebaseInitProvider"
-167-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:24:13-77
-168            android:authorities="com.cs407.soundscape.firebaseinitprovider"
-168-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:25:13-72
-169            android:directBootAware="true"
-169-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:26:13-43
-170            android:exported="false"
-170-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:27:13-37
-171            android:initOrder="100" />
-171-->[com.google.firebase:firebase-common:22.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ff8958b724382108c1b4265e891e9425/transformed/firebase-common-22.0.1/AndroidManifest.xml:28:13-36
-172        <provider
-172-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-173            android:name="androidx.startup.InitializationProvider"
-173-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-174            android:authorities="com.cs407.soundscape.androidx-startup"
-174-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-175            android:exported="false" >
-175-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-176            <meta-data
-176-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-177                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-177-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-178                android:value="androidx.startup" />
-178-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4f6627dc5d754754181dd9aefccb12ce/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-179            <meta-data
-179-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9ce4233479500f00e1d173b4e9bbc166/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-180                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-180-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9ce4233479500f00e1d173b4e9bbc166/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-181                android:value="androidx.startup" />
-181-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9ce4233479500f00e1d173b4e9bbc166/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-182            <meta-data
-182-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-183                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-183-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-184                android:value="androidx.startup" />
-184-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-185        </provider>
-186
-187        <receiver
-187-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-188            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-188-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-189            android:directBootAware="false"
-189-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-190            android:enabled="true"
-190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-191            android:exported="true"
-191-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-192            android:permission="android.permission.DUMP" >
-192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-193            <intent-filter>
-193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-194                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-195            </intent-filter>
-196            <intent-filter>
-196-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-197                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-197-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-197-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-198            </intent-filter>
-199            <intent-filter>
-199-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-200                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-200-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-200-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-201            </intent-filter>
-202            <intent-filter>
-202-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-203                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-203-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-203-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e832d0921e56d01e1f90ee08bb944056/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-204            </intent-filter>
-205        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
-206        <activity
-206-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe02da061949b8cebb51c2d5dc67fee7/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
-207            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-207-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe02da061949b8cebb51c2d5dc67fee7/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
-208            android:exported="false"
-208-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe02da061949b8cebb51c2d5dc67fee7/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
-209            android:stateNotNeeded="true"
-209-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe02da061949b8cebb51c2d5dc67fee7/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
-210            android:theme="@style/Theme.PlayCore.Transparent" />
-210-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe02da061949b8cebb51c2d5dc67fee7/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
-211    </application>
-212
-213</manifest>
+118                <category android:name="android.intent.category.DEFAULT" />
+118-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+118-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+119                <category android:name="android.intent.category.BROWSABLE" />
+119-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+119-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+120
+121                <data
+121-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+122                    android:host="firebase.auth"
+122-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+123                    android:path="/"
+123-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+124                    android:scheme="genericidp" />
+124-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+125            </intent-filter>
+126        </activity>
+127        <activity
+127-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:47:9-64:20
+128            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+128-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:48:13-79
+129            android:excludeFromRecents="true"
+129-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:49:13-46
+130            android:exported="true"
+130-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:50:13-36
+131            android:launchMode="singleTask"
+131-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:51:13-44
+132            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+132-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:52:13-72
+133            <intent-filter>
+133-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:53:13-63:29
+134                <action android:name="android.intent.action.VIEW" />
+134-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+134-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+135
+136                <category android:name="android.intent.category.DEFAULT" />
+136-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+136-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+137                <category android:name="android.intent.category.BROWSABLE" />
+137-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+137-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+138
+139                <data
+139-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+140                    android:host="firebase.auth"
+140-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+141                    android:path="/"
+141-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+142                    android:scheme="recaptcha" />
+142-->[com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+143            </intent-filter>
+144        </activity>
+145
+146        <service
+146-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+147            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+147-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+148            android:enabled="true"
+148-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+149            android:exported="false" >
+149-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+150            <meta-data
+150-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+151                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+151-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+152                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+152-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+153        </service>
+154
+155        <activity
+155-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+156            android:name="androidx.credentials.playservices.HiddenActivity"
+156-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+157            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+157-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+158            android:enabled="true"
+158-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+159            android:exported="false"
+159-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+160            android:fitsSystemWindows="true"
+160-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+161            android:theme="@style/Theme.Hidden" >
+161-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+162        </activity>
+163        <activity
+163-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+164            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+164-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+165            android:excludeFromRecents="true"
+165-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+166            android:exported="false"
+166-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+167-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+168        <!--
+169            Service handling Google Sign-In user revocation. For apps that do not integrate with
+170            Google Sign-In, this service will never be started.
+171        -->
+172        <service
+172-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+173            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+173-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+174            android:exported="true"
+174-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+175            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+175-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+176            android:visibleToInstantApps="true" />
+176-->[com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+177
+178        <activity
+178-->[com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+179            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+179-->[com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+180            android:exported="false"
+180-->[com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+181            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+181-->[com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+182
+183        <provider
+183-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+184            android:name="com.google.firebase.provider.FirebaseInitProvider"
+184-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+185            android:authorities="com.cs407.soundscape.firebaseinitprovider"
+185-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+186            android:directBootAware="true"
+186-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+187            android:exported="false"
+187-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+188            android:initOrder="100" />
+188-->[com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+189        <provider
+189-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+190            android:name="androidx.startup.InitializationProvider"
+190-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+191            android:authorities="com.cs407.soundscape.androidx-startup"
+191-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+192            android:exported="false" >
+192-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+193            <meta-data
+193-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+194                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+194-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+195                android:value="androidx.startup" />
+195-->[androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+196            <meta-data
+196-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+197                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+197-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+198                android:value="androidx.startup" />
+198-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+199            <meta-data
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+200                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+201                android:value="androidx.startup" />
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+202        </provider>
+203
+204        <receiver
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+205            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+206            android:directBootAware="false"
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+207            android:enabled="true"
+207-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+208            android:exported="true"
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+209            android:permission="android.permission.DUMP" >
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+210            <intent-filter>
+210-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+211                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+212            </intent-filter>
+213            <intent-filter>
+213-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+214                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+215            </intent-filter>
+216            <intent-filter>
+216-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+217                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+218            </intent-filter>
+219            <intent-filter>
+219-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+220                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+221            </intent-filter>
+222        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+223        <activity
+223-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+224            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+224-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
+225            android:exported="false"
+225-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+226            android:stateNotNeeded="true"
+226-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+227            android:theme="@style/Theme.PlayCore.Transparent" />
+227-->[com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+228    </application>
+229
+230</manifest>

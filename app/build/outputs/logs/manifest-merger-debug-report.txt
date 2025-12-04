@@ -1,480 +1,760 @@
 -- Merging decision tree log ---
 meta-data#com.google.android.geo.API_KEY
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:33:9-35:47
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:33:9-35:47
 	android:value
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:35:13-44
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:35:13-44
 	android:name
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:34:13-58
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:34:13-58
 manifest
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:2:1-38:12
-MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d969cd2b94d510c49e578167ed38874/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5390360e6bf862593995a0bcf0d85ce4/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/60dd926b50674aae77898dd9372e6ae8/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/23606007c742ec2410a30df7ba486ee4/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b50d5d740dc7d1e01ed0f6db2e2143d1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/804266e29e3b0ce63ed6d3d8a0165d1f/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/af21a4df80c0d30560eff34d72cae0a4/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4971956313ddd750249c102571be1bac/transformed/maps-compose-4.4.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/78f44ba9b823caf1947d52ee09923462/transformed/material3-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e10c0bbfbba0430903eae900d068fae5/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/77c774abee6457287003ca8694536564/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6dc5f7643ae4ec81caea685a52d68947/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7d20a549bb344cf673409a4e07ffa6de/transformed/material-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/995f5595c6c544ca078599b104099566/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/799c3f022d580ee5fcaf001edf28ed39/transformed/animation-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d5f5a969f21f59dc97945c83256aecff/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/c3c363b2b7280d3d983ba03b82fe3f7f/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ab394e5cb112e1992c8a7e6ea7803d43/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b9b034bbc4e16386cbe996c9c8be2a12/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/405badbb239f25ac16d7c174882b2dc9/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/32032222eacdd706a3425f903f02f406/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bfc7ae044d521d1fbd2a5c04559c8f85/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/15a19574cd4eecf83bc885d2197ca12d/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eb601740a4913cb9d429cdc9ff5ed158/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/560d9e1f40b53c043fdd403b693453cd/transformed/ui-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d4de0f0c31842e2781894ca336dc5ed/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/131f081e4fc29c0939fa5f193878191f/transformed/activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9258d032bdd5454af23e1da3e5eaeed0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/54f372249d225a2290e609256fbf1a0c/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be8c98901314c799a8afaae2d06ac68e/transformed/maps-ktx-5.0.0/AndroidManifest.xml:18:1-23:12
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:17:1-44:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/151cdf6a39504ebb7fd432acd88c312c/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a5ec88237a494ffbf92a745f33227c1b/transformed/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2c5dd4fd814da6acb992d1e316b90591/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b52e39141b749533b181aef168432877/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a266918a1d186e834eafae651601f5c0/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8d04278f4caaec1e37441dc70967860a/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1926010e42151d3bf0c7c9a248a36c9d/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/82f5f5d817b4ecb7569a3682f2e584ce/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7be191ac909e6b5e657ea8b4621322a7/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/55990391810e5329a133d37fe049a52b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/24eac4d83722042e02caa1ad40869c7d/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9fff0bfa6abaaa319d2a5add95654922/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/076059e6d3ce59db58661db6433301d0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4fda788263553d7873992a83522f852f/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/99f81257353dbab423874d1c60f85ed4/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cda65dfff0cabf59fed18e7d086607d3/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/572d3e3ac648f9e3425dfc0b232be444/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/17790389514d79938211c0c6ab6a73cc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/3851c21938cffaec47b40b63fd79aec8/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e96bd9a4de98137edabe9b6ac5bbdbd/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/26c83e3baeaaebeab66c3eaf8186085c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b59efcdd8ef83049da9213db3658d2bb/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/f6eebc2bdea3b6873caadc3ed559661d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e52bd6d5d0db0433890316258e27816/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bc2dab2935a721293e18225979c4d7c3/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/48a069d1a0a82f68813fa43c3037aca0/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/164f6d5ee421d54ec349747e5e0ad5e3/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8b0c24291c9c82f41c06e3a4038b58c5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8689c9d11d4801f0615c301df9025164/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/930c4bc6a7fe1de38b580a8e45f1429b/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/0b0266022ed65df58d52c5dde163eda4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a7586f50d4fb6b9c5c4be29fd004dc97/transformed/viewbinding-7.4.2/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/171c00f5415a6dcebd8dd57393858109/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe95e179e4fb0e74d19dbb49b259dea3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/05e01c92471583b07c1d8fb8ec4a8096/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be511d3e94c945f68a6b51434906b7d8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b553dbf4e965181615ec26333e67855f/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:2:1-38:12
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c790b6cdc26bb27a9f874ca1ba12c200/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/f167b70f4669705c6e34900740619616/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c5c8c17e39870551cf3afa99a2ccca63/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/1e87d8f2e29375f21b7443db70c4b2be/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c2bdbc6bc9278841f9562a61e395e5a4/transformed/navigation-compose-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/43ddab393c923eba611f1e32915748cf/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/d2251b918e47ecee6da9e62661bb8155/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/51498ccca860ea2a057ed7cb62c5bcd3/transformed/maps-compose-4.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/8b8c2beed52eb78a81d21630f6f3a680/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/83173ffe8fe727c943ceacbcb3a238b6/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/89994be65442fb2c9de1741fa34e8a8e/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0738876730d7c4c244b7b763f06f5756/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/fd03138058de00cd2612010af7acb0ed/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/691973cfe5c1a033878303b736306ad4/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/90a59150008eff316e3b0c871f30fb0b/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e19be5017a64ad2e9e043bdade9efaf/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/588616550ae2d3edaf77a669ff896009/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/f1c37644c4c4c670c60be516ad8e5bbe/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/3ec4534d7e76df5423d1ed262d5016d9/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0c950bd0531e46940dec65bd5fb03499/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/ccb2c289bee5769668962685b934d125/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/515caf661c7ee247e81649a5e2d78b64/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/328bf37f26a8ea14154955e0bb8f0156/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e710f75654886816d80c52f6afc9963/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/5fc85e7be9724346de66514c6cdd8e6b/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/eb299130e3289a29da3ec9d27f6f2d2b/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f88f429918ccd3b3c233e26e5e0dc054/transformed/maps-ktx-5.0.0/AndroidManifest.xml:18:1-23:12
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/michaeltang/.gradle/caches/transforms-3/012efc729ee09b409ed9dcfaf455d16b/transformed/play-services-location-21.3.0/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:17:1-75:12
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/3c2ae1704c77af2747549d9a5196eaae/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/michaeltang/.gradle/caches/transforms-3/437e31de4ee44fd7e7eac47b5a687865/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/michaeltang/.gradle/caches/transforms-3/a9bd6ec6449ab55b9cd180c88206f985/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/michaeltang/.gradle/caches/transforms-3/7391485e7b582b321fc662b412097bb5/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/michaeltang/.gradle/caches/transforms-3/bdef146fd933de14c1d5d95b7940f46a/transformed/play-services-fido-20.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/michaeltang/.gradle/caches/transforms-3/2c003682d6835c989738ada2c8989ebc/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/michaeltang/.gradle/caches/transforms-3/031e4cfc663f2e92d083d5f6050d5ba2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/799661d7d5a41706066e10b8bd4b6318/transformed/integrity-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/1bb1c8778a385f4cbc9cdd9a7e16e77c/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/1f83da531fc31e08615abc39e31d76b8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/b6936f6b6f1c3da38eea7fcab8184001/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/f6b7148c175192053219fa49d80490a0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/4d07fdaab88476956385b036a2ac7882/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/49619c26d5a7015e565f18e02739ad94/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/e1e02101631a1ba9f359bd2bd5703c4f/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/44f3e7503732a00ab861682d9f785f35/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/aebf6ecd9a5f43d013bf5789eae4dbd4/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/c379b26b26d638b160d79d2a3dcce434/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/5ec55f7e6ea5a82b28c79559144ebbc5/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/090d8418d4465a20e39c2a06f115aad4/transformed/activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/633d23daad374baa91f7b155a5b994f0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/5a4b7920a615ff71d17043e87c58eab1/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/a8df387f3567493932e9afcdf524bf79/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d6a4f90ecb427cabb319bc255f5f7a64/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/62ff40f63108a88820333a72944f32f6/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/7ddd855695eb0f88c5941f0477a5fcaf/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/108ce2dff638279e15241d0dd0d3de7a/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/23985f19a0e51789e41283f67d3aec92/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/4f4e041b8fa3bab6ad5f54a4d6c2d82b/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/3617753b67a7d6171448df0fc4574344/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/faf530f03c2da09c4c999615fb7d0aa1/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/61291ece41a8fd06aa1ed0f5b6f54504/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/ea6962017bac4fa808856006333fed4e/transformed/googleid-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/940645bd30207d72ed85620d79a8c9e3/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/71fbbdd89865461b15c0491bb3b6ceb7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f0dc94f7f1aaf84999af21ea9cc710ff/transformed/firebase-components-18.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/transforms-3/e645d11840b8b09ad75cf4608035ec1a/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/739cb5d4de3d0c3badd8c1c72c71f640/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/transforms-3/f978ffa700b0c23366e1b23db607ba66/transformed/viewbinding-7.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/ca399ba90fe1a924e6e81e21ef6cd031/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/31ab0731a72d0b0dee1bd472960d8d76/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/michaeltang/.gradle/caches/transforms-3/b91acf701e6cc645ed8a74fba954ba51/transformed/grpc-android-1.62.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/2f67e143c42783f2f55b5c2e19a7d2a4/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:2:1-21:12
 	package
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:5:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:11:22-76
 application
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:14:5-36:19
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:14:5-36:19
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/151cdf6a39504ebb7fd432acd88c312c/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/151cdf6a39504ebb7fd432acd88c312c/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8689c9d11d4801f0615c301df9025164/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8689c9d11d4801f0615c301df9025164/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:14:5-36:19
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:14:5-36:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/michaeltang/.gradle/caches/transforms-3/012efc729ee09b409ed9dcfaf455d16b/transformed/play-services-location-21.3.0/AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/michaeltang/.gradle/caches/transforms-3/012efc729ee09b409ed9dcfaf455d16b/transformed/play-services-location-21.3.0/AndroidManifest.xml:6:5-20
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:28:5-73:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:23:5-42:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:23:5-42:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/michaeltang/.gradle/caches/transforms-3/a9bd6ec6449ab55b9cd180c88206f985/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/michaeltang/.gradle/caches/transforms-3/a9bd6ec6449ab55b9cd180c88206f985/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/michaeltang/.gradle/caches/transforms-3/bdef146fd933de14c1d5d95b7940f46a/transformed/play-services-fido-20.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/michaeltang/.gradle/caches/transforms-3/bdef146fd933de14c1d5d95b7940f46a/transformed/play-services-fido-20.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/michaeltang/.gradle/caches/transforms-3/031e4cfc663f2e92d083d5f6050d5ba2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/michaeltang/.gradle/caches/transforms-3/031e4cfc663f2e92d083d5f6050d5ba2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/799661d7d5a41706066e10b8bd4b6318/transformed/integrity-1.3.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/799661d7d5a41706066e10b8bd4b6318/transformed/integrity-1.3.0/AndroidManifest.xml:5:5-6:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/aebf6ecd9a5f43d013bf5789eae4dbd4/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/aebf6ecd9a5f43d013bf5789eae4dbd4/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/71fbbdd89865461b15c0491bb3b6ceb7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/71fbbdd89865461b15c0491bb3b6ceb7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
 	android:extractNativeLibs
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:19:9-41
 	android:fullBackupContent
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:17:9-54
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:17:9-54
 	android:roundIcon
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:20:9-63
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:20:9-63
 	tools:targetApi
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:23:9-29
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:23:9-29
 	android:icon
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:18:9-58
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:18:9-58
 	android:allowBackup
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:22:9-48
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:22:9-48
 	android:dataExtractionRules
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:16:9-65
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:16:9-65
 activity#com.cs407.soundscape.MainActivity
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:24:9-32:20
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:24:9-32:20
 	android:exported
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:26:13-36
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:26:13-36
 	android:theme
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:27:13-52
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:27:13-52
 	android:name
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:25:13-41
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:25:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:28:13-31:29
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml:30:27-74
 uses-sdk
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
-INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
-MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d969cd2b94d510c49e578167ed38874/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d969cd2b94d510c49e578167ed38874/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5390360e6bf862593995a0bcf0d85ce4/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5390360e6bf862593995a0bcf0d85ce4/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/60dd926b50674aae77898dd9372e6ae8/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/60dd926b50674aae77898dd9372e6ae8/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/23606007c742ec2410a30df7ba486ee4/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/23606007c742ec2410a30df7ba486ee4/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b50d5d740dc7d1e01ed0f6db2e2143d1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b50d5d740dc7d1e01ed0f6db2e2143d1/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/804266e29e3b0ce63ed6d3d8a0165d1f/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/804266e29e3b0ce63ed6d3d8a0165d1f/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/af21a4df80c0d30560eff34d72cae0a4/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/af21a4df80c0d30560eff34d72cae0a4/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4971956313ddd750249c102571be1bac/transformed/maps-compose-4.4.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4971956313ddd750249c102571be1bac/transformed/maps-compose-4.4.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/78f44ba9b823caf1947d52ee09923462/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/78f44ba9b823caf1947d52ee09923462/transformed/material3-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e10c0bbfbba0430903eae900d068fae5/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/e10c0bbfbba0430903eae900d068fae5/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/77c774abee6457287003ca8694536564/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/77c774abee6457287003ca8694536564/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6dc5f7643ae4ec81caea685a52d68947/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6dc5f7643ae4ec81caea685a52d68947/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7d20a549bb344cf673409a4e07ffa6de/transformed/material-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7d20a549bb344cf673409a4e07ffa6de/transformed/material-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/995f5595c6c544ca078599b104099566/transformed/animation-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/995f5595c6c544ca078599b104099566/transformed/animation-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/799c3f022d580ee5fcaf001edf28ed39/transformed/animation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/799c3f022d580ee5fcaf001edf28ed39/transformed/animation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d5f5a969f21f59dc97945c83256aecff/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/d5f5a969f21f59dc97945c83256aecff/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/c3c363b2b7280d3d983ba03b82fe3f7f/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/c3c363b2b7280d3d983ba03b82fe3f7f/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ab394e5cb112e1992c8a7e6ea7803d43/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/ab394e5cb112e1992c8a7e6ea7803d43/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b9b034bbc4e16386cbe996c9c8be2a12/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b9b034bbc4e16386cbe996c9c8be2a12/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/405badbb239f25ac16d7c174882b2dc9/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/405badbb239f25ac16d7c174882b2dc9/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/32032222eacdd706a3425f903f02f406/transformed/ui-util-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/32032222eacdd706a3425f903f02f406/transformed/ui-util-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bfc7ae044d521d1fbd2a5c04559c8f85/transformed/ui-text-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bfc7ae044d521d1fbd2a5c04559c8f85/transformed/ui-text-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/15a19574cd4eecf83bc885d2197ca12d/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/15a19574cd4eecf83bc885d2197ca12d/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eb601740a4913cb9d429cdc9ff5ed158/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/eb601740a4913cb9d429cdc9ff5ed158/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/560d9e1f40b53c043fdd403b693453cd/transformed/ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/560d9e1f40b53c043fdd403b693453cd/transformed/ui-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d4de0f0c31842e2781894ca336dc5ed/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5d4de0f0c31842e2781894ca336dc5ed/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/131f081e4fc29c0939fa5f193878191f/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/131f081e4fc29c0939fa5f193878191f/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9258d032bdd5454af23e1da3e5eaeed0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9258d032bdd5454af23e1da3e5eaeed0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/54f372249d225a2290e609256fbf1a0c/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/54f372249d225a2290e609256fbf1a0c/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be8c98901314c799a8afaae2d06ac68e/transformed/maps-ktx-5.0.0/AndroidManifest.xml:21:5-44
-MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be8c98901314c799a8afaae2d06ac68e/transformed/maps-ktx-5.0.0/AndroidManifest.xml:21:5-44
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/151cdf6a39504ebb7fd432acd88c312c/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/151cdf6a39504ebb7fd432acd88c312c/transformed/play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a5ec88237a494ffbf92a745f33227c1b/transformed/fragment-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a5ec88237a494ffbf92a745f33227c1b/transformed/fragment-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2c5dd4fd814da6acb992d1e316b90591/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/2c5dd4fd814da6acb992d1e316b90591/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b52e39141b749533b181aef168432877/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b52e39141b749533b181aef168432877/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a266918a1d186e834eafae651601f5c0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a266918a1d186e834eafae651601f5c0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8d04278f4caaec1e37441dc70967860a/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8d04278f4caaec1e37441dc70967860a/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1926010e42151d3bf0c7c9a248a36c9d/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1926010e42151d3bf0c7c9a248a36c9d/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/82f5f5d817b4ecb7569a3682f2e584ce/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/82f5f5d817b4ecb7569a3682f2e584ce/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7be191ac909e6b5e657ea8b4621322a7/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7be191ac909e6b5e657ea8b4621322a7/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/55990391810e5329a133d37fe049a52b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/55990391810e5329a133d37fe049a52b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/24eac4d83722042e02caa1ad40869c7d/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/24eac4d83722042e02caa1ad40869c7d/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9fff0bfa6abaaa319d2a5add95654922/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/9fff0bfa6abaaa319d2a5add95654922/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/076059e6d3ce59db58661db6433301d0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/076059e6d3ce59db58661db6433301d0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4fda788263553d7873992a83522f852f/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/4fda788263553d7873992a83522f852f/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/99f81257353dbab423874d1c60f85ed4/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/99f81257353dbab423874d1c60f85ed4/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cda65dfff0cabf59fed18e7d086607d3/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cda65dfff0cabf59fed18e7d086607d3/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/572d3e3ac648f9e3425dfc0b232be444/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/572d3e3ac648f9e3425dfc0b232be444/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/17790389514d79938211c0c6ab6a73cc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/17790389514d79938211c0c6ab6a73cc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/3851c21938cffaec47b40b63fd79aec8/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/3851c21938cffaec47b40b63fd79aec8/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e96bd9a4de98137edabe9b6ac5bbdbd/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e96bd9a4de98137edabe9b6ac5bbdbd/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/26c83e3baeaaebeab66c3eaf8186085c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/26c83e3baeaaebeab66c3eaf8186085c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b59efcdd8ef83049da9213db3658d2bb/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b59efcdd8ef83049da9213db3658d2bb/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/f6eebc2bdea3b6873caadc3ed559661d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/f6eebc2bdea3b6873caadc3ed559661d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e52bd6d5d0db0433890316258e27816/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8e52bd6d5d0db0433890316258e27816/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bc2dab2935a721293e18225979c4d7c3/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bc2dab2935a721293e18225979c4d7c3/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/48a069d1a0a82f68813fa43c3037aca0/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/48a069d1a0a82f68813fa43c3037aca0/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/164f6d5ee421d54ec349747e5e0ad5e3/transformed/runtime-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/164f6d5ee421d54ec349747e5e0ad5e3/transformed/runtime-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8b0c24291c9c82f41c06e3a4038b58c5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8b0c24291c9c82f41c06e3a4038b58c5/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8689c9d11d4801f0615c301df9025164/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8689c9d11d4801f0615c301df9025164/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/930c4bc6a7fe1de38b580a8e45f1429b/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/930c4bc6a7fe1de38b580a8e45f1429b/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/0b0266022ed65df58d52c5dde163eda4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/0b0266022ed65df58d52c5dde163eda4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a7586f50d4fb6b9c5c4be29fd004dc97/transformed/viewbinding-7.4.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/a7586f50d4fb6b9c5c4be29fd004dc97/transformed/viewbinding-7.4.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/171c00f5415a6dcebd8dd57393858109/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/171c00f5415a6dcebd8dd57393858109/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe95e179e4fb0e74d19dbb49b259dea3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe95e179e4fb0e74d19dbb49b259dea3/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/05e01c92471583b07c1d8fb8ec4a8096/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/05e01c92471583b07c1d8fb8ec4a8096/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be511d3e94c945f68a6b51434906b7d8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/be511d3e94c945f68a6b51434906b7d8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b553dbf4e965181615ec26333e67855f/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/b553dbf4e965181615ec26333e67855f/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
+INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c790b6cdc26bb27a9f874ca1ba12c200/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c790b6cdc26bb27a9f874ca1ba12c200/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/f167b70f4669705c6e34900740619616/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/f167b70f4669705c6e34900740619616/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c5c8c17e39870551cf3afa99a2ccca63/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c5c8c17e39870551cf3afa99a2ccca63/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/1e87d8f2e29375f21b7443db70c4b2be/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/1e87d8f2e29375f21b7443db70c4b2be/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c2bdbc6bc9278841f9562a61e395e5a4/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /Users/michaeltang/.gradle/caches/transforms-3/c2bdbc6bc9278841f9562a61e395e5a4/transformed/navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/43ddab393c923eba611f1e32915748cf/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose-utils:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/43ddab393c923eba611f1e32915748cf/transformed/maps-compose-utils-4.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/d2251b918e47ecee6da9e62661bb8155/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-compose-widgets:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/d2251b918e47ecee6da9e62661bb8155/transformed/maps-compose-widgets-4.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/51498ccca860ea2a057ed7cb62c5bcd3/transformed/maps-compose-4.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-compose:4.4.1] /Users/michaeltang/.gradle/caches/transforms-3/51498ccca860ea2a057ed7cb62c5bcd3/transformed/maps-compose-4.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/8b8c2beed52eb78a81d21630f6f3a680/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/8b8c2beed52eb78a81d21630f6f3a680/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/83173ffe8fe727c943ceacbcb3a238b6/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/83173ffe8fe727c943ceacbcb3a238b6/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/89994be65442fb2c9de1741fa34e8a8e/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/89994be65442fb2c9de1741fa34e8a8e/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0738876730d7c4c244b7b763f06f5756/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0738876730d7c4c244b7b763f06f5756/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/fd03138058de00cd2612010af7acb0ed/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/fd03138058de00cd2612010af7acb0ed/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/691973cfe5c1a033878303b736306ad4/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/691973cfe5c1a033878303b736306ad4/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/90a59150008eff316e3b0c871f30fb0b/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/90a59150008eff316e3b0c871f30fb0b/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e19be5017a64ad2e9e043bdade9efaf/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e19be5017a64ad2e9e043bdade9efaf/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/588616550ae2d3edaf77a669ff896009/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/588616550ae2d3edaf77a669ff896009/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/f1c37644c4c4c670c60be516ad8e5bbe/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/f1c37644c4c4c670c60be516ad8e5bbe/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/3ec4534d7e76df5423d1ed262d5016d9/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/3ec4534d7e76df5423d1ed262d5016d9/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0c950bd0531e46940dec65bd5fb03499/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0c950bd0531e46940dec65bd5fb03499/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/ccb2c289bee5769668962685b934d125/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/ccb2c289bee5769668962685b934d125/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/515caf661c7ee247e81649a5e2d78b64/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/515caf661c7ee247e81649a5e2d78b64/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/328bf37f26a8ea14154955e0bb8f0156/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/328bf37f26a8ea14154955e0bb8f0156/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e710f75654886816d80c52f6afc9963/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/9e710f75654886816d80c52f6afc9963/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/5fc85e7be9724346de66514c6cdd8e6b/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/5fc85e7be9724346de66514c6cdd8e6b/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/eb299130e3289a29da3ec9d27f6f2d2b/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-utils-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/eb299130e3289a29da3ec9d27f6f2d2b/transformed/maps-utils-ktx-5.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f88f429918ccd3b3c233e26e5e0dc054/transformed/maps-ktx-5.0.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.maps.android:maps-ktx:5.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f88f429918ccd3b3c233e26e5e0dc054/transformed/maps-ktx-5.0.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/michaeltang/.gradle/caches/transforms-3/012efc729ee09b409ed9dcfaf455d16b/transformed/play-services-location-21.3.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/michaeltang/.gradle/caches/transforms-3/012efc729ee09b409ed9dcfaf455d16b/transformed/play-services-location-21.3.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:21:5-23:151
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/3c2ae1704c77af2747549d9a5196eaae/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/3c2ae1704c77af2747549d9a5196eaae/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:21:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/michaeltang/.gradle/caches/transforms-3/437e31de4ee44fd7e7eac47b5a687865/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/michaeltang/.gradle/caches/transforms-3/437e31de4ee44fd7e7eac47b5a687865/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/michaeltang/.gradle/caches/transforms-3/a9bd6ec6449ab55b9cd180c88206f985/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/michaeltang/.gradle/caches/transforms-3/a9bd6ec6449ab55b9cd180c88206f985/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/michaeltang/.gradle/caches/transforms-3/7391485e7b582b321fc662b412097bb5/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/michaeltang/.gradle/caches/transforms-3/7391485e7b582b321fc662b412097bb5/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/michaeltang/.gradle/caches/transforms-3/bdef146fd933de14c1d5d95b7940f46a/transformed/play-services-fido-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/michaeltang/.gradle/caches/transforms-3/bdef146fd933de14c1d5d95b7940f46a/transformed/play-services-fido-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/michaeltang/.gradle/caches/transforms-3/2c003682d6835c989738ada2c8989ebc/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/michaeltang/.gradle/caches/transforms-3/2c003682d6835c989738ada2c8989ebc/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/michaeltang/.gradle/caches/transforms-3/031e4cfc663f2e92d083d5f6050d5ba2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/michaeltang/.gradle/caches/transforms-3/031e4cfc663f2e92d083d5f6050d5ba2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/799661d7d5a41706066e10b8bd4b6318/transformed/integrity-1.3.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/799661d7d5a41706066e10b8bd4b6318/transformed/integrity-1.3.0/AndroidManifest.xml:4:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/1bb1c8778a385f4cbc9cdd9a7e16e77c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/1bb1c8778a385f4cbc9cdd9a7e16e77c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/1f83da531fc31e08615abc39e31d76b8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/1f83da531fc31e08615abc39e31d76b8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/b6936f6b6f1c3da38eea7fcab8184001/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/b6936f6b6f1c3da38eea7fcab8184001/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/f6b7148c175192053219fa49d80490a0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/f6b7148c175192053219fa49d80490a0/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/4d07fdaab88476956385b036a2ac7882/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/4d07fdaab88476956385b036a2ac7882/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/49619c26d5a7015e565f18e02739ad94/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/michaeltang/.gradle/caches/transforms-3/49619c26d5a7015e565f18e02739ad94/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/e1e02101631a1ba9f359bd2bd5703c4f/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/e1e02101631a1ba9f359bd2bd5703c4f/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/44f3e7503732a00ab861682d9f785f35/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/44f3e7503732a00ab861682d9f785f35/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/aebf6ecd9a5f43d013bf5789eae4dbd4/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/aebf6ecd9a5f43d013bf5789eae4dbd4/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/c379b26b26d638b160d79d2a3dcce434/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/c379b26b26d638b160d79d2a3dcce434/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/5ec55f7e6ea5a82b28c79559144ebbc5/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/5ec55f7e6ea5a82b28c79559144ebbc5/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/090d8418d4465a20e39c2a06f115aad4/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/090d8418d4465a20e39c2a06f115aad4/transformed/activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/633d23daad374baa91f7b155a5b994f0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/michaeltang/.gradle/caches/transforms-3/633d23daad374baa91f7b155a5b994f0/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/5a4b7920a615ff71d17043e87c58eab1/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/5a4b7920a615ff71d17043e87c58eab1/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/a8df387f3567493932e9afcdf524bf79/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/a8df387f3567493932e9afcdf524bf79/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d6a4f90ecb427cabb319bc255f5f7a64/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d6a4f90ecb427cabb319bc255f5f7a64/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/62ff40f63108a88820333a72944f32f6/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/62ff40f63108a88820333a72944f32f6/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/7ddd855695eb0f88c5941f0477a5fcaf/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/7ddd855695eb0f88c5941f0477a5fcaf/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/108ce2dff638279e15241d0dd0d3de7a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/108ce2dff638279e15241d0dd0d3de7a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/23985f19a0e51789e41283f67d3aec92/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/23985f19a0e51789e41283f67d3aec92/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/4f4e041b8fa3bab6ad5f54a4d6c2d82b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/4f4e041b8fa3bab6ad5f54a4d6c2d82b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/3617753b67a7d6171448df0fc4574344/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/3617753b67a7d6171448df0fc4574344/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/faf530f03c2da09c4c999615fb7d0aa1/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/faf530f03c2da09c4c999615fb7d0aa1/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/61291ece41a8fd06aa1ed0f5b6f54504/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/61291ece41a8fd06aa1ed0f5b6f54504/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/ea6962017bac4fa808856006333fed4e/transformed/googleid-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/michaeltang/.gradle/caches/transforms-3/ea6962017bac4fa808856006333fed4e/transformed/googleid-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/940645bd30207d72ed85620d79a8c9e3/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/michaeltang/.gradle/caches/transforms-3/940645bd30207d72ed85620d79a8c9e3/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/71fbbdd89865461b15c0491bb3b6ceb7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/71fbbdd89865461b15c0491bb3b6ceb7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f0dc94f7f1aaf84999af21ea9cc710ff/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/f0dc94f7f1aaf84999af21ea9cc710ff/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/transforms-3/e645d11840b8b09ad75cf4608035ec1a/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/michaeltang/.gradle/caches/transforms-3/e645d11840b8b09ad75cf4608035ec1a/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/739cb5d4de3d0c3badd8c1c72c71f640/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/739cb5d4de3d0c3badd8c1c72c71f640/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/transforms-3/f978ffa700b0c23366e1b23db607ba66/transformed/viewbinding-7.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:7.4.2] /Users/michaeltang/.gradle/caches/transforms-3/f978ffa700b0c23366e1b23db607ba66/transformed/viewbinding-7.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/ca399ba90fe1a924e6e81e21ef6cd031/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/ca399ba90fe1a924e6e81e21ef6cd031/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/31ab0731a72d0b0dee1bd472960d8d76/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/michaeltang/.gradle/caches/transforms-3/31ab0731a72d0b0dee1bd472960d8d76/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/michaeltang/.gradle/caches/transforms-3/b91acf701e6cc645ed8a74fba954ba51/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/michaeltang/.gradle/caches/transforms-3/b91acf701e6cc645ed8a74fba954ba51/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/2f67e143c42783f2f55b5c2e19a7d2a4/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/michaeltang/.gradle/caches/transforms-3/2f67e143c42783f2f55b5c2e19a7d2a4/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:23:9-148
 	android:targetSdkVersion
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/michaeltang/StudioProjects/SoundScape/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/michaeltang/StudioProjects/SoundScapev2/app/src/main/AndroidManifest.xml
 activity#androidx.compose.ui.tooling.PreviewActivity
-ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
 	android:exported
-		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/089f433970c68d84e50191c8f412e225/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/0e97ed523c96c10b3a66f93f5073aad6/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
 activity#androidx.activity.ComponentActivity
-ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
+ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
 	android:exported
-		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/88133541a7d898d2488bc79db2d8e5ea/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /Users/michaeltang/.gradle/caches/transforms-3/c8f3cf3ba19e333589755930e0c224e5/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
 meta-data#com.google.android.gms.version
-ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8c5e3862e570fb7c57a764896f830ac6/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/michaeltang/.gradle/caches/transforms-3/82f8655cda36f288d33bee1e56b2a9e0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
 	android:value
-		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
 	android:name
-		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/6db23e955befbd8c476f720f2b7cc732/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/michaeltang/.gradle/caches/transforms-3/e476de9a84b9b64e8b8a4211884c2ca9/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/michaeltang/.gradle/caches/transforms-3/b91acf701e6cc645ed8a74fba954ba51/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/michaeltang/.gradle/caches/transforms-3/b91acf701e6cc645ed8a74fba954ba51/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
 queries
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
 package#com.google.android.apps.maps
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/bcad779065c11749d08ef1e8f5097bfd/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/michaeltang/.gradle/caches/transforms-3/cfcee40132ce7495c6493139c1ff9b6d/transformed/play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/7c807940a6e2f4e7efee85584722f802/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/1abbf93b7efd2204b5b85ab499a704f3/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/fe1bcb3073f15872473ab8b1f52570d0/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/5197309afb2046ffdae9571659f68ebe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-permission#com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-uses-permission#com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/cf3816798df59720491262f56095e9d6/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:34:13-32
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:10:13-84
+meta-data#com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar
+ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/a6edbcc1a0e84c0db1bedae94c86f6cb/transformed/firebase-firestore-ktx-25.1.1/AndroidManifest.xml:13:17-129
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/michaeltang/.gradle/caches/transforms-3/9b12258a81f546ec9fff74e84c69ae83/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar
+ADDED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth-ktx:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/4a797590a3a69b89edfd0abec2faf1a7/transformed/firebase-auth-ktx-23.1.0/AndroidManifest.xml:12:17-119
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] /Users/michaeltang/.gradle/caches/transforms-3/375bce9c400faf2ebe54aa19d2cb7a30/transformed/firebase-auth-23.1.0/AndroidManifest.xml:70:17-109
+service#androidx.credentials.playservices.CredentialProviderMetadataHolder
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+meta-data#androidx.credentials.CREDENTIAL_PROVIDER_KEY
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+	android:value
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+activity#androidx.credentials.playservices.HiddenActivity
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+	android:fitsSystemWindows
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+	android:configChanges
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+	android:theme
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/michaeltang/.gradle/caches/transforms-3/88278e0766122e8ef6094b3eefad5e0f/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/michaeltang/.gradle/caches/transforms-3/d5655cd4c010b571593db6e6b5a1288a/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/michaeltang/.gradle/caches/transforms-3/e3e85c6e49f702b69d9becaa07c8e931/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/0230f98f9bc9694a165be8b6be99d064/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/michaeltang/.gradle/caches/transforms-3/d0a9847c645656f6b8a3229fda85085c/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.5.1] /Users/michaeltang/.gradle/caches/transforms-3/4092efd04d4576620885abbc2077b412/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:22-95
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/michaeltang/.gradle/caches/transforms-3/33ef1024326f1b493db4f4f19b5be555/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/7282853ce857648b055c5fddc54e376e/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/michaeltang/.gradle/caches/transforms-3/d2ec5a92ef1e813d1c4997db8db8b2ed/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.cs407.soundscape.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/michaeltang/.gradle/caches/transforms-3/e7d59200d85cf7c2a67b55ee593515f7/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/9.0-milestone-1/transforms/8dd99e8b9ceaa1f850ad558e73efc5d8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/michaeltang/.gradle/caches/transforms-3/441f5f31adf2b302bdd2868008304ec4/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+	android:exported
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+	android:name
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/michaeltang/.gradle/caches/transforms-3/edc8d5ff089a982fdb153530ac667ff8/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
