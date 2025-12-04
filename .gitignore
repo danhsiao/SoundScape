@@ -3,6 +3,7 @@ cat <<'EOF' > .gitignore
 /build/
 *.apk
 *.aab
+app/build/
 
 # Local configuration
 /local.properties
