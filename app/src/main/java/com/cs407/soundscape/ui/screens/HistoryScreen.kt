@@ -12,29 +12,43 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.cs407.soundscape.data.model.SoundEvent
-import com.cs407.soundscape.data.repository.MockSoundRepository
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.cs407.soundscape.data.SoundEvent
+import com.cs407.soundscape.data.SessionManager
+import com.cs407.soundscape.data.SoundEventViewModel
+import com.cs407.soundscape.data.SoundEventViewModelFactory
 import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Locale
 
 @Composable
 fun HistoryScreen() {
-    // TODO: Replace with ViewModel when backend is integrated
-    val repository = remember { MockSoundRepository() }
-    var events by remember { mutableStateOf<List<SoundEvent>>(emptyList()) }
-
-    // TODO: Load from ViewModel/Repository when backend is integrated
-    events = remember { repository.getAllEvents().sortedByDescending { it.timestamp } }
+    val context = LocalContext.current
+    val sessionManager = remember { SessionManager() }
+    val userId = sessionManager.getUserId()
+    
+    val viewModel: SoundEventViewModel? = if (userId != null) {
+        viewModel(factory = SoundEventViewModelFactory(userId))
+    } else {
+        null
+    }
+    
+    val events by viewModel?.events?.collectAsState() ?: remember { 
+        kotlinx.coroutines.flow.MutableStateFlow(emptyList<SoundEvent>()) 
+    }.collectAsState()
 
     Column(
         modifier = Modifier
@@ -48,7 +62,14 @@ fun HistoryScreen() {
             modifier = Modifier.padding(bottom = 16.dp)
         )
 
-        if (events.isEmpty()) {
+        if (userId == null) {
+            Text(
+                text = "Please sign in to view your recording history",
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(16.dp)
+            )
+        } else if (events.isEmpty()) {
             Text(
                 text = "No sound events recorded yet",
                 style = MaterialTheme.typography.bodyLarge,
@@ -71,6 +92,7 @@ fun HistoryScreen() {
 @Composable
 fun HistoryEventCard(event: SoundEvent) {
     val dateFormat = SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault())
+    val timestampDate = Date(event.timestamp)
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -88,25 +110,17 @@ fun HistoryEventCard(event: SoundEvent) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = event.title,
+                    text = event.label.ifBlank { "Recording" },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.weight(1f)
                 )
                 Text(
-                    text = "${event.decibelLevel} dB",
+                    text = "${String.format("%.1f", event.decibelLevel)} dB",
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary
                 )
             }
-
-            Spacer(modifier = Modifier.padding(4.dp))
-
-            Text(
-                text = event.description,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
 
             Spacer(modifier = Modifier.padding(8.dp))
 
@@ -115,15 +129,17 @@ fun HistoryEventCard(event: SoundEvent) {
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Text(
-                    text = "Type: ${event.soundType.name}",
+                    text = dateFormat.format(timestampDate),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
-                Text(
-                    text = dateFormat.format(event.timestamp),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                if (event.duration > 0) {
+                    Text(
+                        text = "Duration: ${event.duration / 1000}s",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             }
             
             if (event.environment != null) {
@@ -136,12 +152,14 @@ fun HistoryEventCard(event: SoundEvent) {
                 )
             }
             
-            Spacer(modifier = Modifier.padding(top = 4.dp))
-            Text(
-                text = "📍 ${String.format("%.4f", event.latitude)}, ${String.format("%.4f", event.longitude)}",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            if (event.latitude != null && event.longitude != null) {
+                Spacer(modifier = Modifier.padding(top = 4.dp))
+                Text(
+                    text = "📍 ${String.format("%.4f", event.latitude)}, ${String.format("%.4f", event.longitude)}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
     }
 }
