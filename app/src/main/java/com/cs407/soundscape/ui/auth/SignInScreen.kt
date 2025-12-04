@@ -5,11 +5,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.cs407.soundscape.data.SessionManager
 import com.cs407.soundscape.data.UserViewModel
 import com.cs407.soundscape.data.UserViewModelFactory
 
@@ -18,11 +16,9 @@ fun SignInScreen(
     onSignInSuccess: () -> Unit,
     onNavigateToSignUp: () -> Unit
 ) {
-    val context = LocalContext.current
-    val userViewModel: UserViewModel = viewModel(factory = UserViewModelFactory(context))
-    val sessionManager = remember { SessionManager(context) }
+    val userViewModel: UserViewModel = viewModel(factory = UserViewModelFactory())
 
-    var username by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     val authError by userViewModel.authError.collectAsState()
     val isLoading by userViewModel.isLoading.collectAsState()
@@ -41,9 +37,9 @@ fun SignInScreen(
         )
 
         OutlinedTextField(
-            value = username,
-            onValueChange = { username = it },
-            label = { Text("Username") },
+            value = email,
+            onValueChange = { email = it },
+            label = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 16.dp),
@@ -71,9 +67,8 @@ fun SignInScreen(
 
         Button(
             onClick = {
-                if (username.isNotBlank() && password.isNotBlank()) {
-                    userViewModel.signIn(username, password) { user ->
-                        sessionManager.saveSession(user.id, user.username)
+                if (email.isNotBlank() && password.isNotBlank()) {
+                    userViewModel.signIn(email, password) { _ ->
                         onSignInSuccess()
                     }
                 }
@@ -81,7 +76,7 @@ fun SignInScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
-            enabled = !isLoading && username.isNotBlank() && password.isNotBlank()
+            enabled = !isLoading && email.isNotBlank() && password.isNotBlank()
         ) {
             if (isLoading) {
                 CircularProgressIndicator(
@@ -100,4 +95,3 @@ fun SignInScreen(
         }
     }
 }
-

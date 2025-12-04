@@ -9,7 +9,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.cs407.soundscape.data.SessionManager
@@ -18,8 +17,7 @@ import com.cs407.soundscape.data.SoundEventViewModelFactory
 
 @Composable
 fun RoomTestScreen() {
-    val context = LocalContext.current
-    val sessionManager = remember { SessionManager(context) }
+    val sessionManager = remember { SessionManager() }
     val userId = remember { sessionManager.getUserId() }
 
     if (userId == null) {
@@ -28,7 +26,7 @@ fun RoomTestScreen() {
     }
 
     val vm: SoundEventViewModel =
-        viewModel(factory = SoundEventViewModelFactory(context, userId))
+        viewModel(factory = SoundEventViewModelFactory(userId))
 
     val events by vm.events.collectAsState()
 

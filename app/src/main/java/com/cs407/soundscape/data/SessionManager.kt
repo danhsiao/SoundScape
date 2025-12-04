@@ -1,36 +1,48 @@
 package com.cs407.soundscape.data
 
-import android.content.Context
-import android.content.SharedPreferences
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
-class SessionManager(context: Context) {
-    private val prefs: SharedPreferences = context.getSharedPreferences("SoundScapeSession", Context.MODE_PRIVATE)
-    private val KEY_USER_ID = "user_id"
-    private val KEY_USERNAME = "username"
+class SessionManager {
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    fun saveSession(userId: Int, username: String) {
-        prefs.edit().apply {
-            putInt(KEY_USER_ID, userId)
-            putString(KEY_USERNAME, username)
-            apply()
-        }
+    // Get current user
+    fun getCurrentUser(): FirebaseUser? {
+        return auth.currentUser
     }
 
-    fun getUserId(): Int? {
-        val userId = prefs.getInt(KEY_USER_ID, -1)
-        return if (userId == -1) null else userId
+    // Get user ID
+    fun getUserId(): String? {
+        return auth.currentUser?.uid
     }
 
+    // Get username (display name)
     fun getUsername(): String? {
-        return prefs.getString(KEY_USERNAME, null)
+        return auth.currentUser?.displayName
     }
 
-    fun clearSession() {
-        prefs.edit().clear().apply()
+    // Get email
+    fun getEmail(): String? {
+        return auth.currentUser?.email
     }
 
+    // Check if user is logged in
     fun isLoggedIn(): Boolean {
-        return getUserId() != null
+        return auth.currentUser != null
+    }
+
+    // Clear session (sign out)
+    fun clearSession() {
+        auth.signOut()
+    }
+
+    // Add auth state listener
+    fun addAuthStateListener(listener: FirebaseAuth.AuthStateListener) {
+        auth.addAuthStateListener(listener)
+    }
+
+    // Remove auth state listener
+    fun removeAuthStateListener(listener: FirebaseAuth.AuthStateListener) {
+        auth.removeAuthStateListener(listener)
     }
 }
-

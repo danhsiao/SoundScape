@@ -1,4 +1,3 @@
-cat <<'EOF' > .gitignore
 # Generated files
 /build/
 *.apk

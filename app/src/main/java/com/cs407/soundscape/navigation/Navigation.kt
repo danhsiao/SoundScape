@@ -44,8 +44,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun SoundScapeNavigation() {
-    val context = LocalContext.current
-    val sessionManager = remember { SessionManager(context) }
+    val sessionManager = remember { SessionManager() }
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
@@ -67,7 +66,9 @@ fun SoundScapeNavigation() {
 
     Scaffold(
         bottomBar = {
-            if (currentDestination?.route != Screen.Login.route) {
+            if (currentDestination?.route != Screen.SignIn.route && 
+                currentDestination?.route != Screen.SignUp.route &&
+                currentDestination?.route != Screen.Login.route) {
                 NavigationBar {
                     bottomNavItems.forEach { screen ->
                         NavigationBarItem(
@@ -115,9 +116,35 @@ fun SoundScapeNavigation() {
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = Screen.Login.route,
+            startDestination = startDestination,
             modifier = Modifier.padding(innerPadding)
         ) {
+            composable(Screen.SignIn.route) {
+                SignInScreen(
+                    onSignInSuccess = {
+                        navController.navigate(Screen.Home.route) {
+                            popUpTo(Screen.SignIn.route) { inclusive = true }
+                            launchSingleTop = true
+                        }
+                    },
+                    onNavigateToSignUp = {
+                        navController.navigate(Screen.SignUp.route)
+                    }
+                )
+            }
+            composable(Screen.SignUp.route) {
+                SignUpScreen(
+                    onSignUpSuccess = {
+                        navController.navigate(Screen.Home.route) {
+                            popUpTo(Screen.SignUp.route) { inclusive = true }
+                            launchSingleTop = true
+                        }
+                    },
+                    onNavigateToSignIn = {
+                        navController.popBackStack()
+                    }
+                )
+            }
             composable(Screen.Login.route) {
                 LoginScreen(
                     onAuthenticated = {
@@ -183,4 +210,5 @@ private val Screen.icon: androidx.compose.ui.graphics.vector.ImageVector
         is Screen.Analytics -> Icons.Default.Analytics
         is Screen.Settings -> Icons.Default.Settings
         is Screen.Login -> Icons.Default.Person
+        is Screen.Test -> Icons.Default.QrCodeScanner
     }

@@ -2,13 +2,14 @@ package com.cs407.soundscape.data
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val repo: UserRepository) : ViewModel() {
 
-    private val _currentUser = MutableStateFlow<UserEntity?>(null)
+    private val _currentUser = MutableStateFlow<FirebaseUser?>(null)
     val currentUser = _currentUser.asStateFlow()
 
     private val _authError = MutableStateFlow<String?>(null)
@@ -17,17 +18,22 @@ class UserViewModel(private val repo: UserRepository) : ViewModel() {
     private val _isLoading = MutableStateFlow(false)
     val isLoading = _isLoading.asStateFlow()
 
-    fun signIn(username: String, password: String, onSuccess: (UserEntity) -> Unit) {
+    init {
+        // Initialize with current user if logged in
+        _currentUser.value = repo.getCurrentUser()
+    }
+
+    fun signIn(email: String, password: String, onSuccess: (FirebaseUser) -> Unit) {
         viewModelScope.launch {
             _isLoading.value = true
             _authError.value = null
             try {
-                val user = repo.getUserByCredentials(username, password)
-                if (user != null) {
+                val result = repo.signIn(email, password)
+                result.onSuccess { user ->
                     _currentUser.value = user
                     onSuccess(user)
-                } else {
-                    _authError.value = "Invalid username or password"
+                }.onFailure { exception ->
+                    _authError.value = exception.message ?: "Sign in failed"
                 }
             } catch (e: Exception) {
                 _authError.value = "Error: ${e.message}"
@@ -37,34 +43,17 @@ class UserViewModel(private val repo: UserRepository) : ViewModel() {
         }
     }
 
-    fun signUp(username: String, password: String, email: String? = null, onSuccess: (UserEntity) -> Unit) {
+    fun signUp(email: String, password: String, username: String, onSuccess: (FirebaseUser) -> Unit) {
         viewModelScope.launch {
             _isLoading.value = true
             _authError.value = null
             try {
-                // Check if username already exists
-                val existingUser = repo.getUserByUsername(username)
-                if (existingUser != null) {
-                    _authError.value = "Username already exists"
-                    return@launch
-                }
-
-                // Create new user
-                val userIdLong = repo.insertUser(
-                    UserEntity(
-                        username = username,
-                        password = password,
-                        email = email
-                    )
-                )
-
-                // Get the created user (insert returns the row ID)
-                val newUser = repo.getUserByIdSync(userIdLong.toInt())
-                if (newUser != null) {
-                    _currentUser.value = newUser
-                    onSuccess(newUser)
-                } else {
-                    _authError.value = "Failed to create user"
+                val result = repo.signUp(email, password, username)
+                result.onSuccess { user ->
+                    _currentUser.value = user
+                    onSuccess(user)
+                }.onFailure { exception ->
+                    _authError.value = exception.message ?: "Sign up failed"
                 }
             } catch (e: Exception) {
                 _authError.value = "Error: ${e.message}"
@@ -75,6 +64,7 @@ class UserViewModel(private val repo: UserRepository) : ViewModel() {
     }
 
     fun signOut() {
+        repo.signOut()
         _currentUser.value = null
         _authError.value = null
     }
@@ -83,4 +73,3 @@ class UserViewModel(private val repo: UserRepository) : ViewModel() {
         _authError.value = null
     }
 }
-

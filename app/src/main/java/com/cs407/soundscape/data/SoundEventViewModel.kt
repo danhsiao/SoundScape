@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 
 class SoundEventViewModel(
     private val repo: SoundEventRepository,
-    private val userId: Int
+    private val userId: String
 ) : ViewModel() {
 
     val events = repo.getAllByUserId(userId)
@@ -21,7 +21,7 @@ class SoundEventViewModel(
     fun addSampleEvent() {
         viewModelScope.launch {
             repo.insert(
-                SoundEventEntity(
+                SoundEvent(
                     userId = userId,
                     label = "Test Event",
                     timestamp = System.currentTimeMillis()
@@ -32,7 +32,7 @@ class SoundEventViewModel(
 
     suspend fun insertEvent(label: String, timestamp: Long) {
         repo.insert(
-            SoundEventEntity(
+            SoundEvent(
                 userId = userId,
                 label = label,
                 timestamp = timestamp

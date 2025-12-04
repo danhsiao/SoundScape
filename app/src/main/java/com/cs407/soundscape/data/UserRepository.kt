@@ -1,27 +1,80 @@
 package com.cs407.soundscape.data
 
-import kotlinx.coroutines.flow.Flow
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
+import kotlinx.coroutines.tasks.await
 
-class UserRepository(private val userDao: UserDao) {
+class UserRepository {
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    suspend fun insertUser(user: UserEntity): Long {
-        return userDao.insert(user)
+    // Get current logged-in user
+    fun getCurrentUser(): FirebaseUser? {
+        return auth.currentUser
     }
 
-    suspend fun getUserByCredentials(username: String, password: String): UserEntity? {
-        return userDao.getUserByCredentials(username, password)
+    // Sign up with email and password
+    suspend fun signUp(email: String, password: String, username: String): Result<FirebaseUser> {
+        return try {
+            val result = auth.createUserWithEmailAndPassword(email, password).await()
+            val user = result.user
+            
+            // Update user profile with display name
+            user?.let {
+                val profileUpdates = UserProfileChangeRequest.Builder()
+                    .setDisplayName(username)
+                    .build()
+                it.updateProfile(profileUpdates).await()
+            }
+            
+            if (user != null) {
+                Result.success(user)
+            } else {
+                Result.failure(Exception("Failed to create user"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
-    suspend fun getUserByUsername(username: String): UserEntity? {
-        return userDao.getUserByUsername(username)
+    // Sign in with email and password
+    suspend fun signIn(email: String, password: String): Result<FirebaseUser> {
+        return try {
+            val result = auth.signInWithEmailAndPassword(email, password).await()
+            val user = result.user
+            
+            if (user != null) {
+                Result.success(user)
+            } else {
+                Result.failure(Exception("Failed to sign in"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
-    fun getUserById(userId: Int): Flow<UserEntity?> {
-        return userDao.getUserById(userId)
+    // Sign out
+    fun signOut() {
+        auth.signOut()
     }
 
-    suspend fun getUserByIdSync(userId: Int): UserEntity? {
-        return userDao.getUserByIdSync(userId)
+    // Check if user is logged in
+    fun isLoggedIn(): Boolean {
+        return auth.currentUser != null
+    }
+
+    // Get user ID
+    fun getUserId(): String? {
+        return auth.currentUser?.uid
+    }
+
+    // Get username (display name)
+    fun getUsername(): String? {
+        return auth.currentUser?.displayName
+    }
+
+    // Get user email
+    fun getEmail(): String? {
+        return auth.currentUser?.email
     }
 }
-
