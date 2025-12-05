@@ -2,7 +2,6 @@ package com.cs407.soundscape.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,40 +10,57 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDownward
-import androidx.compose.material.icons.filled.ArrowUpward
-import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.cs407.soundscape.data.model.AnalyticsData
-import com.cs407.soundscape.data.model.ForecastTrend
-import com.cs407.soundscape.data.model.SoundType
-import com.cs407.soundscape.data.repository.MockAnalyticsRepository
-import com.cs407.soundscape.data.repository.MockSoundRepository
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.cs407.soundscape.data.SessionManager
+import com.cs407.soundscape.data.SoundEventViewModel
+import com.cs407.soundscape.data.SoundEventViewModelFactory
+import com.cs407.soundscape.data.SoundEvent
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 @Composable
 fun AnalyticsScreen() {
-    // TODO: Replace with ViewModel when backend is integrated
-    val soundRepository = remember { MockSoundRepository() }
-    val analyticsRepository = remember { MockAnalyticsRepository(soundRepository) }
-    var analyticsData by remember { mutableStateOf<AnalyticsData?>(null) }
+    val sessionManager = remember { SessionManager() }
+    val userId = sessionManager.getUserId()
+    
+    if (userId == null) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = "Please sign in to view analytics",
+                style = MaterialTheme.typography.bodyLarge
+            )
+        }
+        return
+    }
 
-    // TODO: Load from ViewModel/Repository when backend is integrated
-    analyticsData = remember { analyticsRepository.getAnalyticsData() }
+    val viewModel: SoundEventViewModel = viewModel(
+        factory = SoundEventViewModelFactory(userId)
+    )
+    val events by viewModel.events.collectAsState()
+    
+    // Calculate analytics from real data
+    val totalEvents = events.size
+    val eventsByLabel = events.groupBy { it.label }.mapValues { it.value.size }
+    val peakHours = calculatePeakHours(events)
+    val recentEvents = events.take(10)
 
     LazyColumn(
         modifier = Modifier
@@ -60,112 +76,116 @@ fun AnalyticsScreen() {
             )
         }
 
-        analyticsData?.let { data ->
+        if (events.isEmpty()) {
+            item {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(32.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "No data yet",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Start recording sounds to see analytics",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        } else {
             item {
                 StatCard(
                     title = "Total Events",
-                    value = data.totalEvents.toString()
+                    value = totalEvents.toString()
                 )
             }
 
-            item {
-                StatCard(
-                    title = "Average Decibel",
-                    value = String.format("%.1f dB", data.averageDecibel)
-                )
-            }
-
-            item {
-                Text(
-                    text = "Events by Type",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-            items(data.eventsByType.entries.toList()) { (type, count) ->
-                TypeStatCard(
-                    type = type,
-                    count = count
-                )
-            }
-
-            item {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "Peak Hours",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-            item {
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.surfaceVariant
+            if (eventsByLabel.isNotEmpty()) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Events by Type",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold
                     )
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp)
-                    ) {
-                        Text(
-                            text = data.peakHours.joinToString(", ") { "$it:00" },
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                }
+
+                items(eventsByLabel.entries.sortedByDescending { it.value }) { (label, count) ->
+                    LabelStatCard(label = label, count = count)
+                }
+            }
+
+            if (peakHours.isNotEmpty()) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Peak Hours",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
+                item {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceVariant
                         )
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp)
+                        ) {
+                            Text(
+                                text = peakHours.joinToString(", ") { "$it:00" },
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
                     }
                 }
             }
 
-            item {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "Top 5 Quiet Spots Now",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-            }
+            if (recentEvents.isNotEmpty()) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Recent Events",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
 
-            items(data.topQuietSpots) { spot ->
-                QuietSpotCard(spot = spot)
+                items(recentEvents) { event ->
+                    RecentEventCard(event = event)
+                }
             }
-
-            item {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "Top Locations",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-            items(data.topLocations) { location ->
-                LocationStatCard(location = location)
-            }
-
-            item {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "Noise Forecasts",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-            items(data.forecasts) { forecast ->
-                ForecastCard(forecast = forecast)
-            }
-        } ?: item {
-            Text(
-                text = "Loading analytics...",
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
         }
     }
+}
+
+fun calculatePeakHours(events: List<SoundEvent>): List<Int> {
+    if (events.isEmpty()) return emptyList()
+    
+    val hourCounts = events
+        .groupBy { event ->
+            val date = Date(event.timestamp)
+            SimpleDateFormat("HH", Locale.getDefault()).format(date).toInt()
+        }
+        .mapValues { it.value.size }
+    
+    val maxCount = hourCounts.values.maxOrNull() ?: 0
+    return hourCounts
+        .filter { it.value == maxCount }
+        .keys
+        .sorted()
+        .take(3)
 }
 
 @Composable
@@ -198,39 +218,11 @@ fun StatCard(title: String, value: String) {
 }
 
 @Composable
-fun TypeStatCard(type: SoundType, count: Int) {
+fun LabelStatCard(label: String, count: Int) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(
-                text = type.name,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Medium
-            )
-            Text(
-                text = count.toString(),
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.primary
-            )
-        }
-    }
-}
-
-@Composable
-fun QuietSpotCard(spot: com.cs407.soundscape.data.model.QuietSpot) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
         )
     ) {
         Row(
@@ -240,22 +232,14 @@ fun QuietSpotCard(spot: com.cs407.soundscape.data.model.QuietSpot) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = spot.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "📍 ${String.format("%.4f", spot.latitude)}, ${String.format("%.4f", spot.longitude)}",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
             Text(
-                text = "${String.format("%.1f", spot.currentDecibel)} dB",
-                style = MaterialTheme.typography.headlineSmall,
+                text = label.ifEmpty { "Unknown" },
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium
+            )
+            Text(
+                text = count.toString(),
+                style = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -264,7 +248,10 @@ fun QuietSpotCard(spot: com.cs407.soundscape.data.model.QuietSpot) {
 }
 
 @Composable
-fun LocationStatCard(location: com.cs407.soundscape.data.model.LocationStats) {
+fun RecentEventCard(event: SoundEvent) {
+    val dateFormat = SimpleDateFormat("MMM dd, yyyy 'at' HH:mm", Locale.getDefault())
+    val formattedDate = dateFormat.format(Date(event.timestamp))
+    
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -277,119 +264,16 @@ fun LocationStatCard(location: com.cs407.soundscape.data.model.LocationStats) {
                 .padding(16.dp)
         ) {
             Text(
-                text = "📍 ${String.format("%.4f", location.latitude)}, ${String.format("%.4f", location.longitude)}",
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium
+                text = event.label.ifEmpty { "Sound Event" },
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(4.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Text(
-                    text = "${location.eventCount} events",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "${String.format("%.1f", location.averageDecibel)} dB avg",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun ForecastCard(forecast: com.cs407.soundscape.data.model.NoiseForecast) {
-    val trendIcon = when (forecast.trend) {
-        ForecastTrend.UP -> Icons.Default.ArrowUpward
-        ForecastTrend.DOWN -> Icons.Default.ArrowDownward
-        ForecastTrend.STABLE -> Icons.Default.Remove
-    }
-    val trendColor = when (forecast.trend) {
-        ForecastTrend.UP -> Color(0xFFFF6B6B) // Red for increasing
-        ForecastTrend.DOWN -> Color(0xFF51CF66) // Green for decreasing
-        ForecastTrend.STABLE -> MaterialTheme.colorScheme.onSurfaceVariant
-    }
-
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = forecast.locationName,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    Icon(
-                        imageVector = trendIcon,
-                        contentDescription = forecast.trend.name,
-                        tint = trendColor,
-                        modifier = Modifier.height(20.dp)
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Column {
-                    Text(
-                        text = "Current",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Text(
-                        text = "${String.format("%.1f", forecast.currentDecibel)} dB",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium
-                    )
-                }
-                Column {
-                    Text(
-                        text = "Forecasted",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Text(
-                        text = "${String.format("%.1f", forecast.forecastedDecibel)} dB",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium,
-                        color = trendColor
-                    )
-                }
-                Column {
-                    Text(
-                        text = "Confidence",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Text(
-                        text = "${String.format("%.0f", forecast.confidence * 100)}%",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium
-                    )
-                }
-            }
+            Text(
+                text = formattedDate,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
     }
 }
