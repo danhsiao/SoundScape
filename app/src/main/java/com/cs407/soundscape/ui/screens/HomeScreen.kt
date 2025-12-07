@@ -26,16 +26,22 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.cs407.soundscape.data.model.SoundEvent
-import com.cs407.soundscape.data.repository.MockSoundRepository
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.cs407.soundscape.data.SoundEvent
+import com.cs407.soundscape.data.SessionManager
+import com.cs407.soundscape.data.SoundEventViewModel
+import com.cs407.soundscape.data.SoundEventViewModelFactory
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 @Composable
 fun HomeScreen(
@@ -45,11 +51,22 @@ fun HomeScreen(
     onNavigateToAnalytics: () -> Unit = {},
     onNavigateToSettings: () -> Unit = {}
 ) {
-    // TODO: Replace with ViewModel when backend is integrated
-    val repository = remember { MockSoundRepository() }
-    var recentEvents by remember { mutableStateOf<List<SoundEvent>>(emptyList()) }
-    
-    recentEvents = remember { repository.getAllEvents().take(5) }
+    val context = LocalContext.current
+    val sessionManager = remember { SessionManager() }
+    val userId = sessionManager.getUserId()
+
+    val viewModel: SoundEventViewModel? = if (userId != null) {
+        viewModel(factory = SoundEventViewModelFactory(userId))
+    } else {
+        null
+    }
+
+    val events by viewModel?.events?.collectAsState() ?: remember {
+        kotlinx.coroutines.flow.MutableStateFlow(emptyList<SoundEvent>())
+    }.collectAsState()
+
+    // Take only the 5 most recent events
+    val recentEvents = events.take(5)
 
     LazyColumn(
         modifier = Modifier
@@ -137,18 +154,28 @@ fun HomeScreen(
             )
         }
 
-        items(recentEvents) { event ->
-            SoundEventCard(event = event)
-        }
-
-        item {
-            // TODO: Add pull-to-refresh when backend is integrated
-            Text(
-                text = "Pull down to refresh",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(16.dp)
-            )
+        if (userId == null) {
+            item {
+                Text(
+                    text = "Please sign in to view recent events",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
+        } else if (recentEvents.isEmpty()) {
+            item {
+                Text(
+                    text = "No sound events recorded yet. Tap 'Scan' to record your first event!",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
+        } else {
+            items(recentEvents) { event ->
+                SoundEventCard(event = event)
+            }
         }
     }
 }
@@ -193,6 +220,9 @@ fun QuickActionCard(
 
 @Composable
 fun SoundEventCard(event: SoundEvent) {
+    val dateFormat = SimpleDateFormat("MMM dd, HH:mm", Locale.getDefault())
+    val timestampDate = Date(event.timestamp)
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -204,31 +234,40 @@ fun SoundEventCard(event: SoundEvent) {
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
-            Text(
-                text = event.title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = event.description,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = event.label.ifBlank { "Recording" },
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.weight(1f)
+                )
+                Text(
+                    text = "${String.format("%.1f", event.decibelLevel)} dB",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Text(
-                    text = "Type: ${event.soundType.name}",
+                    text = dateFormat.format(timestampDate),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
-                Text(
-                    text = "${event.decibelLevel} dB",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                if (event.environment != null) {
+                    Text(
+                        text = "📍 ${event.environment}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        fontWeight = FontWeight.Medium
+                    )
+                }
             }
         }
     }
