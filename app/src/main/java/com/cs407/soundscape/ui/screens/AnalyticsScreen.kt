@@ -268,43 +268,76 @@ data class LocationStats(
     val peakMinDecibelTime: Long
 )
 
+// Calculate distance between two coordinates in meters using Haversine formula
+private fun calculateDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {
+    val earthRadius = 6371000.0 // Earth radius in meters
+    val dLat = Math.toRadians(lat2 - lat1)
+    val dLon = Math.toRadians(lon2 - lon1)
+    val a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    val c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    return earthRadius * c
+}
+
 fun calculateLocationStats(userEvents: List<SoundEvent>, allEvents: List<SoundEvent>, selectedLabel: String): List<LocationStats> {
     // Step 1: Find events with the selected label from CURRENT USER that have location data
     val selectedLabelEvents = userEvents.filter { 
         it.label == selectedLabel && it.latitude != null && it.longitude != null 
     }
     
-    // Step 2: Extract unique coordinates from events with the selected label
-    val uniqueCoordinates = selectedLabelEvents.mapNotNull { event ->
-        event.latitude?.let { lat ->
-            event.longitude?.let { lng ->
-                // Round to 6 decimal places (~0.1 meter precision) to group nearby locations
-                Pair(
-                    String.format(Locale.US, "%.6f", lat).toDouble(),
-                    String.format(Locale.US, "%.6f", lng).toDouble()
-                )
-            }
-        }
-    }.distinct()
+    if (selectedLabelEvents.isEmpty()) return emptyList()
     
-    // Step 3: For each unique coordinate, find ALL events at that coordinate (all labels, all users)
-    return uniqueCoordinates.map { coordinate ->
-        // Find all events at this coordinate from allEvents
-        val allEventsAtCoordinate = allEvents.filter { event ->
-            event.latitude != null && event.longitude != null && 
-            String.format(Locale.US, "%.6f", event.latitude!!).toDouble() == coordinate.first &&
-            String.format(Locale.US, "%.6f", event.longitude!!).toDouble() == coordinate.second
+    // Step 2: Group nearby coordinates together (within 20 meters)
+    val locationGroups = mutableListOf<Pair<Double, Double>>()
+    val thresholdMeters = 20.0 // Group locations within 20 meters
+    
+    for (event in selectedLabelEvents) {
+        val lat = event.latitude!!
+        val lng = event.longitude!!
+        
+        // Find if this location is close to any existing group
+        val nearbyGroup = locationGroups.firstOrNull { group ->
+            val (groupLat, groupLng) = group
+            calculateDistance(lat, lng, groupLat, groupLng) <= thresholdMeters
         }
         
-        // Step 4: Calculate statistics from ALL events at this coordinate
-        val avgDecibel = allEventsAtCoordinate.map { it.decibelLevel }.average().toFloat()
+        if (nearbyGroup == null) {
+            // Create a new group with this location as the center
+            locationGroups.add(Pair(lat, lng))
+        }
+    }
+    
+    // Step 3: For each location group, find ALL events within threshold (all labels, all users)
+    return locationGroups.map { groupCenter ->
+        val (centerLat, centerLng) = groupCenter
         
-        val maxDecibelEvent = allEventsAtCoordinate.maxByOrNull { it.decibelLevel }
-        val minDecibelEvent = allEventsAtCoordinate.minByOrNull { it.decibelLevel }
+        // Find all events within threshold from allEvents
+        val allEventsAtLocation = allEvents.filter { event ->
+            event.latitude != null && event.longitude != null && 
+            calculateDistance(centerLat, centerLng, event.latitude!!, event.longitude!!) <= thresholdMeters
+        }
+        
+        if (allEventsAtLocation.isEmpty()) {
+            // Should not happen, but handle gracefully
+            return@map LocationStats(
+                latitude = centerLat,
+                longitude = centerLng,
+                averageDecibel = 0f,
+                peakMaxDecibelTime = 0L,
+                peakMinDecibelTime = 0L
+            )
+        }
+        
+        // Step 4: Calculate statistics from ALL events at this location
+        val avgDecibel = allEventsAtLocation.map { it.decibelLevel }.average().toFloat()
+        
+        val maxDecibelEvent = allEventsAtLocation.maxByOrNull { it.decibelLevel }
+        val minDecibelEvent = allEventsAtLocation.minByOrNull { it.decibelLevel }
         
         LocationStats(
-            latitude = coordinate.first,
-            longitude = coordinate.second,
+            latitude = centerLat,
+            longitude = centerLng,
             averageDecibel = avgDecibel,
             peakMaxDecibelTime = maxDecibelEvent?.timestamp ?: 0L,
             peakMinDecibelTime = minDecibelEvent?.timestamp ?: 0L
