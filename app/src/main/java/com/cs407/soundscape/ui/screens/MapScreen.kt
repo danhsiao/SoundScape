@@ -9,37 +9,42 @@ import androidx.compose.material3.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.runtime.*
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.cs407.soundscape.data.model.SoundEvent
-import com.cs407.soundscape.data.repository.MockSoundRepository
+import com.cs407.soundscape.data.SoundEvent
+import com.cs407.soundscape.data.SoundEventRepository
 import com.cs407.soundscape.ui.theme.*
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.*
-import com.google.maps.android.heatmaps.Gradient
-import com.google.maps.android.heatmaps.HeatmapTileProvider
-import com.google.maps.android.heatmaps.WeightedLatLng
 import kotlinx.coroutines.launch
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
+private data class AggregatedEvent(
+    val latitude: Double,
+    val longitude: Double,
+    val avgDecibel: Float,
+    val count: Int,
+    val environmentLabel: String?
+)
+
 @Composable
 fun MapScreen() {
-    // Repository and base data
-    val repository = remember { MockSoundRepository() }
-    val allEvents = remember { repository.getAllEvents() }
+    // Live Firestore data for all users
+    val repository = remember { SoundEventRepository() }
+    val allEvents by repository.getAll().collectAsState(initial = emptyList())
 
     // Selected event shown in bottom sheet
-    var selectedEvent by remember { mutableStateOf<SoundEvent?>(null) }
+    var selectedEvent by remember { mutableStateOf<AggregatedEvent?>(null) }
 
     // Legend filter toggles
     var showQuiet by remember { mutableStateOf(true) }
@@ -47,9 +52,11 @@ fun MapScreen() {
     var showLoud by remember { mutableStateOf(true) }
 
     // Apply filters to events used by heatmap and tap selection
-    val filteredEvents = remember(allEvents, showQuiet, showModerate, showLoud) {
-        allEvents.filter { e ->
-            when (e.decibelLevel) {
+    val aggregatedEvents = remember(allEvents) { aggregateByProximity(allEvents, 50.0) }
+
+    val filteredEvents = remember(aggregatedEvents, showQuiet, showModerate, showLoud) {
+        aggregatedEvents.filter { e ->
+            when (e.avgDecibel) {
                 in Float.NEGATIVE_INFINITY..50f -> showQuiet
                 in 50f..75f -> showModerate
                 else -> showLoud
@@ -58,8 +65,8 @@ fun MapScreen() {
     }
 
     // Initial map target (fallback if no location yet)
-    val startLatLng = if (allEvents.isNotEmpty())
-        LatLng(allEvents.first().latitude, allEvents.first().longitude)
+    val startLatLng = if (aggregatedEvents.isNotEmpty())
+        LatLng(aggregatedEvents.first().latitude, aggregatedEvents.first().longitude)
     else LatLng(37.7749, -122.4194)
 
     val cameraPositionState = rememberCameraPositionState {
@@ -102,31 +109,6 @@ fun MapScreen() {
         }
     }
 
-    // Heatmap provider: weight by decibel + custom gradient
-    val heatmapProvider: HeatmapTileProvider? = remember(filteredEvents) {
-        if (filteredEvents.isEmpty()) return@remember null
-        val minDb = 30f
-        val maxDb = 100f
-        val weighted = filteredEvents.map { e ->
-            val normalized = ((e.decibelLevel - minDb) / (maxDb - minDb)).coerceIn(0f, 1f)
-            val weight = 1.0 + normalized * 9.0
-            WeightedLatLng(LatLng(e.latitude, e.longitude), weight)
-        }
-        val colors = intArrayOf(
-            HeatmapGradientGreen.toArgb(),
-            HeatmapGradientOrange.toArgb(),
-            HeatmapGradientRed.toArgb()
-        )
-        val startPoints = floatArrayOf(0.1f, 0.5f, 1.0f)
-        val gradient = Gradient(colors, startPoints)
-        HeatmapTileProvider.Builder()
-            .weightedData(weighted)
-            .gradient(gradient)
-            .radius(50)
-            .opacity(1.0)
-            .build()
-    }
-
     Box(modifier = Modifier.fillMaxSize()) {
         // Map with heatmap overlay and tap-to-select behavior
         GoogleMap(
@@ -138,7 +120,17 @@ fun MapScreen() {
                 selectedEvent = findNearestEvent(tapLatLng, filteredEvents, 200.0)
             }
         ) {
-            heatmapProvider?.let { TileOverlay(tileProvider = it, zIndex = 1f) }
+            filteredEvents.forEach { event ->
+                val (fillColor, strokeColor) = colorForDecibel(event.avgDecibel)
+                Circle(
+                    center = LatLng(event.latitude, event.longitude),
+                    radius = 40.0, // meters
+                    fillColor = fillColor,
+                    strokeColor = strokeColor,
+                    strokeWidth = 2f,
+                    zIndex = 1f
+                )
+            }
         }
 
         // Small legend card with three sound ranges and checkboxes
@@ -173,14 +165,9 @@ fun MapScreen() {
                     .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.98f))
                     .padding(16.dp)
             ) {
-                Text(event.title, style = MaterialTheme.typography.titleMedium)
+                Text(event.environmentLabel ?: "Location", style = MaterialTheme.typography.titleMedium)
                 Text(
-                    event.description,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    "${event.decibelLevel} dB • ${event.soundType.name}",
+                    "Avg ${String.format("%.1f", event.avgDecibel)} dB • ${event.count} sample${if (event.count == 1) "" else "s"}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -192,6 +179,71 @@ fun MapScreen() {
             }
         }
     }
+}
+
+// Combine events that are within the same physical spot to reduce noise on the map
+private fun aggregateByProximity(events: List<SoundEvent>, maxDistanceMeters: Double): List<AggregatedEvent> {
+    val geoEvents = events.filter { it.latitude != null && it.longitude != null }
+    val clusters = mutableListOf<MutableList<SoundEvent>>()
+
+    for (event in geoEvents) {
+        val eventLat = event.latitude!!
+        val eventLng = event.longitude!!
+        val clusterIndex = clusters.indexOfFirst { cluster ->
+            val ref = cluster.first()
+            haversineMeters(ref.latitude!!, ref.longitude!!, eventLat, eventLng) <= maxDistanceMeters
+        }
+
+        if (clusterIndex >= 0) {
+            clusters[clusterIndex].add(event)
+        } else {
+            clusters.add(mutableListOf(event))
+        }
+    }
+
+    return clusters.map { cluster ->
+        val avgLat = cluster.map { it.latitude!! }.average()
+        val avgLng = cluster.map { it.longitude!! }.average()
+        val avgDb = cluster.map { it.decibelLevel }.average().toFloat()
+        val label = cluster.firstOrNull { !it.environment.isNullOrBlank() }?.environment
+        AggregatedEvent(
+            latitude = avgLat,
+            longitude = avgLng,
+            avgDecibel = avgDb,
+            count = cluster.size,
+            environmentLabel = label
+        )
+    }
+}
+
+// Map decibel to a smooth green→orange→red gradient with translucent fill and solid stroke
+private fun colorForDecibel(db: Float): Pair<Color, Color> {
+    val minDb = 40f
+    val maxDb = 90f
+    val normalized = ((db - minDb) / (maxDb - minDb)).coerceIn(0f, 1f)
+
+    // 0..0.5 -> green to orange, 0.5..1 -> orange to red
+    val base = if (normalized < 0.5f) {
+        val t = normalized / 0.5f
+        lerpColor(HeatmapQuiet, HeatmapModerate, t)
+    } else {
+        val t = (normalized - 0.5f) / 0.5f
+        lerpColor(HeatmapModerate, HeatmapLoud, t)
+    }
+
+    val fill = base.copy(alpha = 0.32f)
+    return fill to base
+}
+
+// Simple RGB lerp for Compose Color
+private fun lerpColor(start: Color, end: Color, t: Float): Color {
+    val clamped = t.coerceIn(0f, 1f)
+    return Color(
+        red = start.red + (end.red - start.red) * clamped,
+        green = start.green + (end.green - start.green) * clamped,
+        blue = start.blue + (end.blue - start.blue) * clamped,
+        alpha = start.alpha + (end.alpha - start.alpha) * clamped
+    )
 }
 
 @Composable
@@ -235,8 +287,8 @@ private fun LegendFilterRow(
 }
 
 // Nearest-event lookup by distance to tap point (meters)
-private fun findNearestEvent(tapLatLng: LatLng, events: List<SoundEvent>, maxDistanceMeters: Double): SoundEvent? {
-    var nearest: SoundEvent? = null
+private fun findNearestEvent(tapLatLng: LatLng, events: List<AggregatedEvent>, maxDistanceMeters: Double): AggregatedEvent? {
+    var nearest: AggregatedEvent? = null
     var nearestDist = Double.MAX_VALUE
     for (e in events) {
         val d = haversineMeters(tapLatLng.latitude, tapLatLng.longitude, e.latitude, e.longitude)
