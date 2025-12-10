@@ -39,7 +39,6 @@ import com.cs407.soundscape.ui.screens.LoginScreen
 import com.cs407.soundscape.ui.screens.MapScreen
 import com.cs407.soundscape.ui.screens.ScanScreen
 import com.cs407.soundscape.ui.screens.SettingsScreen
-import com.cs407.soundscape.ui.RoomTestScreen
 import kotlinx.coroutines.launch
 
 @Composable
@@ -60,8 +59,7 @@ fun SoundScapeNavigation() {
         Screen.Map,
         Screen.Scan,
         Screen.History,
-        Screen.Analytics,
-        Screen.Test
+        Screen.Analytics
     )
 
     Scaffold(
@@ -190,9 +188,6 @@ fun SoundScapeNavigation() {
                         }
                     }
                 )
-            }
-            composable(Screen.Test.route) {
-                RoomTestScreen()
             }
         }
     }

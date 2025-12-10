@@ -94,7 +94,15 @@ class SoundEventRepository {
             .orderBy("timestamp", Query.Direction.DESCENDING)
             .addSnapshotListener { snapshot, error ->
                 if (error != null) {
-                    close(error)
+                    // Log error for debugging
+                    Log.e("SoundEventRepository", "Error loading all events: ${error.message}", error)
+                    // If it's a missing index error, provide helpful info
+                    if (error is FirebaseFirestoreException && error.code == FirebaseFirestoreException.Code.FAILED_PRECONDITION) {
+                        Log.w("SoundEventRepository", "Firestore index may be missing. Check Firebase Console for index creation link.")
+                    }
+                    // Emit empty list instead of closing the flow
+                    // This allows the UI to continue working even if there's a query error
+                    trySend(emptyList())
                     return@addSnapshotListener
                 }
 
@@ -112,6 +120,7 @@ class SoundEventRepository {
                             duration = doc.getLong("duration") ?: 0L
                         )
                     } catch (e: Exception) {
+                        // Skip malformed documents
                         null
                     }
                 } ?: emptyList()

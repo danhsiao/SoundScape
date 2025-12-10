@@ -3,7 +3,6 @@ package com.cs407.soundscape.ui.screens
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,15 +15,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -67,8 +63,6 @@ fun ScanScreen() {
     val errorMessage by viewModel.errorMessage.collectAsState()
     val saveSuccessMessage by viewModel.saveSuccessMessage.collectAsState()
     val isSaving by viewModel.isSaving.collectAsState()
-
-    var showDropdown by remember { mutableStateOf(false) }
 
     // Permission launchers
     val microphonePermissionLauncher = rememberLauncherForActivityResult(
@@ -202,52 +196,15 @@ fun ScanScreen() {
                     fontWeight = FontWeight.Bold
                 )
 
-                Box {
-                    OutlinedTextField(
-                        value = selectedEnvironment ?: "",
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text("Select location") },
-                        trailingIcon = {
-                            Icon(
-                                imageVector = Icons.Default.ArrowDropDown,
-                                contentDescription = "Dropdown"
-                            )
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { showDropdown = true },
-                        colors = TextFieldDefaults.outlinedTextFieldColors(),
-                        enabled = !isRecording && !isSaving
-                    )
-                    DropdownMenu(
-                        expanded = showDropdown,
-                        onDismissRequest = { showDropdown = false },
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        viewModel.commonEnvironments.forEach { env ->
-                            DropdownMenuItem(
-                                text = { Text(env) },
-                                onClick = {
-                                    viewModel.setSelectedEnvironment(env)
-                                    showDropdown = false
-                                }
-                            )
-                        }
-                    }
-                }
-
-                if (selectedEnvironment == null) {
-                    OutlinedTextField(
-                        value = customEnvironment,
-                        onValueChange = { newValue -> viewModel.setCustomEnvironment(newValue) },
-                        label = { Text("Custom location name") },
-                        placeholder = { Text("e.g., library, café") },
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = TextFieldDefaults.outlinedTextFieldColors(),
-                        enabled = !isRecording && !isSaving
-                    )
-                }
+                OutlinedTextField(
+                    value = customEnvironment,
+                    onValueChange = { newValue -> viewModel.setCustomEnvironment(newValue) },
+                    label = { Text("Location name") },
+                    placeholder = { Text("e.g., College Library, Rathskeller") },
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = TextFieldDefaults.outlinedTextFieldColors(),
+                    enabled = !isRecording && !isSaving
+                )
             }
         }
 
@@ -325,9 +282,9 @@ fun ScanScreen() {
         }
 
         // Location display
-        if (!isRecording && !isSaving && (selectedEnvironment != null || customEnvironment.isNotBlank())) {
+        if (!isRecording && !isSaving && customEnvironment.isNotBlank()) {
             Text(
-                text = "📍 Location: ${selectedEnvironment ?: customEnvironment}",
+                text = "📍 Location: $customEnvironment",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.primary
             )

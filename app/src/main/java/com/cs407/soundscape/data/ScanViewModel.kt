@@ -350,8 +350,14 @@ class ScanViewModel(
             _saveSuccessMessage.value = null
 
             try {
-                val environmentName = _selectedEnvironment.value
-                    ?: _customEnvironment.value.takeIf { it.isNotBlank() }
+                // Ensure location is fetched before saving
+                if (_locationPermissionGranted.value && (_currentLatitude.value == null || _currentLongitude.value == null)) {
+                    getCurrentLocation()
+                    // Wait a bit for location to be fetched
+                    delay(500)
+                }
+
+                val environmentName = _customEnvironment.value.takeIf { it.isNotBlank() }
                 val eventLabel = environmentName ?: "Recording"
 
                 val event = SoundEvent(

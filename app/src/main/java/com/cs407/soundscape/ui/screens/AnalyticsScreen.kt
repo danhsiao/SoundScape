@@ -1,5 +1,6 @@
 package com.cs407.soundscape.ui.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,24 +11,30 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.cs407.soundscape.data.AnalyticsViewModel
+import com.cs407.soundscape.data.AnalyticsViewModelFactory
 import com.cs407.soundscape.data.SessionManager
+import com.cs407.soundscape.data.SoundEvent
 import com.cs407.soundscape.data.SoundEventViewModel
 import com.cs407.soundscape.data.SoundEventViewModelFactory
-import com.cs407.soundscape.data.SoundEvent
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -51,16 +58,25 @@ fun AnalyticsScreen() {
         return
     }
 
-    val viewModel: SoundEventViewModel = viewModel(
+    // Get current user's events for displaying locations
+    val userViewModel: SoundEventViewModel = viewModel(
         factory = SoundEventViewModelFactory(userId)
     )
-    val events by viewModel.events.collectAsState()
+    val userEvents by userViewModel.events.collectAsState()
     
-    // Calculate analytics from real data
-    val totalEvents = events.size
-    val eventsByLabel = events.groupBy { it.label }.mapValues { it.value.size }
-    val peakHours = calculatePeakHours(events)
-    val recentEvents = events.take(10)
+    // Get all events for calculating stats from all users
+    val allEventsViewModel: AnalyticsViewModel = viewModel(
+        factory = AnalyticsViewModelFactory()
+    )
+    val allEvents by allEventsViewModel.allEvents.collectAsState()
+    
+    // State for showing location details dialog
+    var selectedLabel by remember { mutableStateOf<String?>(null) }
+    
+    // Calculate analytics from current user's data (for display)
+    val totalEvents = userEvents.size
+    val eventsByLabel = userEvents.groupBy { it.label }.mapValues { it.value.size }
+    val recentEvents = userEvents.take(10)
 
     LazyColumn(
         modifier = Modifier
@@ -76,7 +92,7 @@ fun AnalyticsScreen() {
             )
         }
 
-        if (events.isEmpty()) {
+        if (userEvents.isEmpty()) {
             item {
                 Column(
                     modifier = Modifier
@@ -116,39 +132,11 @@ fun AnalyticsScreen() {
                 }
 
                 items(eventsByLabel.entries.sortedByDescending { it.value }) { (label, count) ->
-                    LabelStatCard(label = label, count = count)
-                }
-            }
-
-            if (peakHours.isNotEmpty()) {
-                item {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = "Peak Hours",
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold
+                    LabelStatCard(
+                        label = label,
+                        count = count,
+                        onClick = { selectedLabel = label }
                     )
-                }
-
-                item {
-                    Card(
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = CardDefaults.cardColors(
-                            containerColor = MaterialTheme.colorScheme.surfaceVariant
-                        )
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp)
-                        ) {
-                            Text(
-                                text = peakHours.joinToString(", ") { "$it:00" },
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
                 }
             }
 
@@ -168,24 +156,16 @@ fun AnalyticsScreen() {
             }
         }
     }
-}
-
-fun calculatePeakHours(events: List<SoundEvent>): List<Int> {
-    if (events.isEmpty()) return emptyList()
     
-    val hourCounts = events
-        .groupBy { event ->
-            val date = Date(event.timestamp)
-            SimpleDateFormat("HH", Locale.getDefault()).format(date).toInt()
-        }
-        .mapValues { it.value.size }
-    
-    val maxCount = hourCounts.values.maxOrNull() ?: 0
-    return hourCounts
-        .filter { it.value == maxCount }
-        .keys
-        .sorted()
-        .take(3)
+    // Show location details dialog when a label is selected
+    selectedLabel?.let { label ->
+        LocationDetailsDialog(
+            label = label,
+            userEvents = userEvents,
+            allEvents = allEvents,
+            onDismiss = { selectedLabel = null }
+        )
+    }
 }
 
 @Composable
@@ -218,9 +198,11 @@ fun StatCard(title: String, value: String) {
 }
 
 @Composable
-fun LabelStatCard(label: String, count: Int) {
+fun LabelStatCard(label: String, count: Int, onClick: () -> Unit) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant
         )
@@ -276,5 +258,147 @@ fun RecentEventCard(event: SoundEvent) {
             )
         }
     }
+}
+
+data class LocationStats(
+    val latitude: Double,
+    val longitude: Double,
+    val averageDecibel: Float,
+    val peakMaxDecibelTime: Long,
+    val peakMinDecibelTime: Long
+)
+
+fun calculateLocationStats(userEvents: List<SoundEvent>, allEvents: List<SoundEvent>, selectedLabel: String): List<LocationStats> {
+    // Step 1: Find events with the selected label from CURRENT USER that have location data
+    val selectedLabelEvents = userEvents.filter { 
+        it.label == selectedLabel && it.latitude != null && it.longitude != null 
+    }
+    
+    // Step 2: Extract unique coordinates from events with the selected label
+    val uniqueCoordinates = selectedLabelEvents.mapNotNull { event ->
+        event.latitude?.let { lat ->
+            event.longitude?.let { lng ->
+                // Round to 6 decimal places (~0.1 meter precision) to group nearby locations
+                Pair(
+                    String.format(Locale.US, "%.6f", lat).toDouble(),
+                    String.format(Locale.US, "%.6f", lng).toDouble()
+                )
+            }
+        }
+    }.distinct()
+    
+    // Step 3: For each unique coordinate, find ALL events at that coordinate (all labels, all users)
+    return uniqueCoordinates.map { coordinate ->
+        // Find all events at this coordinate from allEvents
+        val allEventsAtCoordinate = allEvents.filter { event ->
+            event.latitude != null && event.longitude != null && 
+            String.format(Locale.US, "%.6f", event.latitude!!).toDouble() == coordinate.first &&
+            String.format(Locale.US, "%.6f", event.longitude!!).toDouble() == coordinate.second
+        }
+        
+        // Step 4: Calculate statistics from ALL events at this coordinate
+        val avgDecibel = allEventsAtCoordinate.map { it.decibelLevel }.average().toFloat()
+        
+        val maxDecibelEvent = allEventsAtCoordinate.maxByOrNull { it.decibelLevel }
+        val minDecibelEvent = allEventsAtCoordinate.minByOrNull { it.decibelLevel }
+        
+        LocationStats(
+            latitude = coordinate.first,
+            longitude = coordinate.second,
+            averageDecibel = avgDecibel,
+            peakMaxDecibelTime = maxDecibelEvent?.timestamp ?: 0L,
+            peakMinDecibelTime = minDecibelEvent?.timestamp ?: 0L
+        )
+    }
+}
+
+@Composable
+fun LocationDetailsDialog(
+    label: String,
+    userEvents: List<SoundEvent>,
+    allEvents: List<SoundEvent>,
+    onDismiss: () -> Unit
+) {
+    val locationStats = remember(userEvents, allEvents, label) { calculateLocationStats(userEvents, allEvents, label) }
+    val dateFormat = SimpleDateFormat("MMM dd, yyyy 'at' HH:mm", Locale.getDefault())
+    
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = {
+            Text(
+                text = "Location Details: $label",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold
+            )
+        },
+        text = {
+            if (locationStats.isEmpty()) {
+                Text(
+                    text = "No location data available for this event type.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            } else {
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(locationStats) { stats ->
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceVariant
+                            )
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Text(
+                                    text = "Location",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                                Text(
+                                    text = "Lat: ${stats.latitude}, Lng: ${stats.longitude}",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Medium
+                                )
+                                
+                                Spacer(modifier = Modifier.height(4.dp))
+                                
+                                Text(
+                                    text = "Average Decibel: ${String.format(Locale.US, "%.1f", stats.averageDecibel)} dB",
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                                
+                                if (stats.peakMaxDecibelTime > 0) {
+                                    Text(
+                                        text = "Peak Max Decibel Time: ${dateFormat.format(Date(stats.peakMaxDecibelTime))}",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                                
+                                if (stats.peakMinDecibelTime > 0) {
+                                    Text(
+                                        text = "Peak Min Decibel Time: ${dateFormat.format(Date(stats.peakMinDecibelTime))}",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text("Close")
+            }
+        }
+    )
 }
 
