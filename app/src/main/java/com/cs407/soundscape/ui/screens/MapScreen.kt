@@ -51,8 +51,26 @@ fun MapScreen() {
     var showModerate by remember { mutableStateOf(true) }
     var showLoud by remember { mutableStateOf(true) }
 
+    // Track current hour for hourly refresh
+    var currentHour by remember { mutableStateOf(System.currentTimeMillis() / (60 * 60 * 1000)) }
+    
+    // Update current hour every hour
+    LaunchedEffect(Unit) {
+        while (true) {
+            kotlinx.coroutines.delay(60 * 60 * 1000) // Wait 1 hour
+            currentHour = System.currentTimeMillis() / (60 * 60 * 1000)
+        }
+    }
+
+    // Filter events to last hour only
+    val lastHourEvents = remember(allEvents, currentHour) {
+        val now = System.currentTimeMillis()
+        val oneHourAgo = now - (60 * 60 * 1000)
+        allEvents.filter { it.timestamp >= oneHourAgo }
+    }
+
     // Apply filters to events used by heatmap and tap selection
-    val aggregatedEvents = remember(allEvents) { aggregateByProximity(allEvents, 50.0) }
+    val aggregatedEvents = remember(lastHourEvents) { aggregateByProximity(lastHourEvents, 50.0) }
 
     val filteredEvents = remember(aggregatedEvents, showQuiet, showModerate, showLoud) {
         aggregatedEvents.filter { e ->
