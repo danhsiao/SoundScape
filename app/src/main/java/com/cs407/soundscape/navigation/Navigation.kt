@@ -205,5 +205,4 @@ private val Screen.icon: androidx.compose.ui.graphics.vector.ImageVector
         is Screen.Analytics -> Icons.Default.Analytics
         is Screen.Settings -> Icons.Default.Settings
         is Screen.Login -> Icons.Default.Person
-        is Screen.Test -> Icons.Default.QrCodeScanner
     }

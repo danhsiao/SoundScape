@@ -37,7 +37,7 @@ import com.cs407.soundscape.data.SoundEvent
 import com.cs407.soundscape.data.SoundEventViewModel
 import com.cs407.soundscape.data.SoundEventViewModelFactory
 import com.cs407.soundscape.data.EWMAForecaster
-import com.cs407.soundscape.data.model.ForecastTrend
+import com.cs407.soundscape.data.ForecastTrend
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

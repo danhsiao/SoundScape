@@ -56,7 +56,7 @@ SoundScape is a community-driven Android application that visualizes real-time a
 | Layer | Details |
 | --- | --- |
 | UI | Jetpack Compose, Material 3 components, Navigation Compose |
-| Data | Mock repositories providing `SoundEvent` and `AnalyticsData` models |
+| Data | Firestore-backed repositories, session manager, view models |
 | Maps | Google Maps Compose utilities, Heatmap overlays (`android-maps-utils`) |
 | Language/Build | Kotlin, Gradle (KTS), compile/target SDK 34, min SDK 26 |
 | Theming | Custom Material 3 color scheme with dark/light support |
@@ -64,8 +64,7 @@ SoundScape is a community-driven Android application that visualizes real-time a
 ### Key Packages
 - `com.cs407.soundscape.ui.screens` – Screen composables for each feature surface.
 - `com.cs407.soundscape.navigation` – Bottom navigation + nav graph wiring.
-- `com.cs407.soundscape.data.model` – Data models for sound events and analytics.
-- `com.cs407.soundscape.data.repository` – Mock repositories serving temporary data.
+- `com.cs407.soundscape.data` – Shared data models, repositories, and view models.
 
 ---
 
@@ -81,8 +80,7 @@ SoundScape/
 │     │  ├─ MainActivity.kt
 │     │  ├─ navigation/
 │     │  ├─ ui/screens/
-│     │  ├─ data/model/
-│     │  └─ data/repository/
+│     │  └─ data/
 │     └─ res/                    # (default Android resources)
 ├─ secrets.properties            # Local Google Maps API key (not in VCS)
 ├─ local.defaults.properties     # Optional default secret values

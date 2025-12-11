@@ -1,6 +1,6 @@
 package com.cs407.soundscape.data
 
-import com.cs407.soundscape.data.model.ForecastTrend
+import com.cs407.soundscape.data.ForecastTrend
 import kotlin.math.abs
 
 /**
